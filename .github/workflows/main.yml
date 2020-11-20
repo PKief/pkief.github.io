@@ -1,0 +1,33 @@
+on: push
+name: Build Angular
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v1
+      - name: Setup Node ${{ matrix.node-version }} ⚙
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install node_modules 📦
+        run: npm install
+      - name: Build and deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v2
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          FOLDER: dist/personal-website
+          BUILD_SCRIPT: npm run build -- --prod
+      - name: Cache node_modules 💾
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
