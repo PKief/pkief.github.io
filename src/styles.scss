@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+@import "bootstrap/scss/bootstrap-grid.scss";
+@import "bootstrap/scss/utilities/_spacing.scss";
+
+@include mat-core();
+
+/************************
+ Theming section
+************************/
+
+// Custom themable components
+// @import "app/sidenav/sidenav.component";
+// @mixin custom-components-theme($theme) {
+//   @include sidenav-theme($theme);
+// }
+
+// Light theme
+$light-primary: mat-palette($mat-indigo);
+$light-accent: mat-palette($mat-pink, A200, A100, A400);
+$light-theme: mat-light-theme($light-primary, $light-accent);
+
+@media (prefers-color-scheme: light) {
+  @include angular-material-theme($light-theme);
+  // @include custom-components-theme($light-theme);
+}
+
+// Dark theme
+$dark-primary: mat-palette($mat-blue-grey);
+$dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$dark-warn: mat-palette($mat-deep-orange);
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+@media (prefers-color-scheme: dark) {
+  @include angular-material-theme($dark-theme);
+  // @include custom-components-theme($dark-theme);
+}
+
+/************************
+ Default global styles
+************************/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
