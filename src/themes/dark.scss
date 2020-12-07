@@ -1,0 +1,81 @@
+@import "~@angular/material/theming";
+
+// custom background and foreground palettes
+$dark-theme-background: (
+  status-bar: #0070ad,
+  app-bar: map_get($mat-blue, 900),
+  background: #12abdb,
+  hover: rgba(#fff, 0.04),
+  card: map_get($mat-gray, 800),
+  dialog: map_get($mat-grey, 800),
+  disabled-button: $white-12-opacity,
+  raised-button: map-get($mat-grey, 800),
+  focused-button: $white-6-opacity,
+  selected-button: map_get($mat-grey, 900),
+  selected-disabled-button: map_get($mat-grey, 800),
+  disabled-button-toggle: black,
+  unselected-chip: map_get($mat-grey, 700),
+  disabled-list-option: black,
+);
+
+$dark-theme-foreground: (
+  base: #fff,
+  divider: $white-12-opacity,
+  dividers: $white-12-opacity,
+  disabled: rgba(#fff, 0.3),
+  disabled-button: rgba(#fff, 0.3),
+  disabled-text: rgba(#fff, 0.3),
+  hint-text: rgba(#fff, 0.3),
+  secondary-text: rgba(#fff, 0.7),
+  icon: #fff,
+  icons: #fff,
+  text: #fff,
+  slider-min: #fff,
+  slider-off: rgba(#fff, 0.3),
+  slider-off-active: rgba(#fff, 0.3),
+);
+
+@function create-dark-theme($primary, $accent, $warn: mat-palette($mat-red)) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+    is-dark: true,
+    foreground: $dark-theme-foreground,
+    background: $dark-theme-background
+  );
+}
+
+$theme-primary: (
+  50: #000000,
+  100: #000000,
+  200: #000000,
+  300: #000000,
+  500: #000000,
+  900: #000000,
+  A100: #000000,
+  A200: #000000,
+  A400: #000000,
+  A700: #000000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$dark-theme-primary: mat-palette($theme-primary);
+$dark-theme-accent: mat-palette($mat-blue);
+$dark-theme-warn: mat-palette($mat-red);
+
+$dark-theme: create-dark-theme(
+  $dark-theme-primary,
+  $dark-theme-accent,
+  $dark-theme-warn
+);

@@ -2,15 +2,15 @@
 
 // custom background and foreground palettes
 $light-theme-background: (
-  status-bar: #0070ad,
-  app-bar: map_get($mat-blue, 900),
+  status-bar: #ebebeb,
+  app-bar: rgba(#fff, 0.4),
   background: #12abdb,
-  hover: rgba(white, 0.04),
+  hover: rgba(#1d1d1f, 0.4),
   card: map_get($mat-red, 800),
   dialog: map_get($mat-grey, 800),
-  disabled-button: $white-12-opacity,
+  disabled-button: #000000,
   raised-button: map-get($mat-grey, 800),
-  focused-button: $white-6-opacity,
+  focused-button: #000000,
   selected-button: map_get($mat-grey, 900),
   selected-disabled-button: map_get($mat-grey, 800),
   disabled-button-toggle: black,
@@ -19,20 +19,20 @@ $light-theme-background: (
 );
 
 $light-theme-foreground: (
-  base: yellow,
-  divider: $white-12-opacity,
-  dividers: $white-12-opacity,
-  disabled: rgba(white, 0.3),
-  disabled-button: rgba(white, 0.3),
-  disabled-text: rgba(white, 0.3),
-  hint-text: rgba(white, 0.3),
-  secondary-text: rgba(white, 0.7),
-  icon: white,
-  icons: white,
-  text: white,
-  slider-min: white,
-  slider-off: rgba(white, 0.3),
-  slider-off-active: rgba(white, 0.3),
+  base: #1d1d1f,
+  divider: #000000,
+  dividers: #000000,
+  disabled: rgba(#1d1d1f, 1),
+  disabled-button: rgba(#1d1d1f, 1),
+  disabled-text: rgba(#1d1d1f, 1),
+  hint-text: rgba(#1d1d1f, 1),
+  secondary-text: rgba(#1d1d1f, 1),
+  icon: #1d1d1f,
+  icons: #1d1d1f,
+  text: #1d1d1f,
+  slider-min: #1d1d1f,
+  slider-off: rgba(#1d1d1f, 1),
+  slider-off-active: rgba(#1d1d1f, 1),
 );
 
 @function create-light-theme($primary, $accent, $warn: mat-palette($mat-red)) {
@@ -46,7 +46,31 @@ $light-theme-foreground: (
   );
 }
 
-$light-theme-primary: mat-palette($mat-green);
+$theme-primary: (
+  50: #aaaaaa,
+  100: #aaaaaa,
+  200: #aaaaaa,
+  300: #aaaaaa,
+  500: #aaaaaa,
+  900: #aaaaaa,
+  A100: #aaaaaa,
+  A200: #aaaaaa,
+  A400: #aaaaaa,
+  A700: #aaaaaa,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$light-theme-primary: mat-palette($theme-primary);
 $light-theme-accent: mat-palette($mat-blue);
 $light-theme-warn: mat-palette($mat-red);
 

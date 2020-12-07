@@ -1,0 +1,45 @@
+.app {
+  width: 100%;
+  height: 100%;
+}
+
+.center-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    text-align: center;
+    border-radius: 50%;
+    width: 200px;
+  }
+}
+
+.title {
+  font-size: 25px;
+  padding: 2rem 0 1rem 0;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: gray;
+  padding-bottom: 2rem;
+}
+
+.social {
+  a {
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  img {
+    width: 3rem;
+    padding: 0 0.5rem 0 0.5rem;
+  }
+}
