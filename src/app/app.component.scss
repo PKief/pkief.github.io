@@ -43,3 +43,16 @@
     padding: 0 0.5rem 0 0.5rem;
   }
 }
+
+div#show-more-icon {
+  position: fixed;
+  bottom: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  mat-icon {
+    font-size: 2rem;
+    color: #b1b1b1;
+  }
+}
