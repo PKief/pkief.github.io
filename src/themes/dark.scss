@@ -3,7 +3,7 @@
 // custom background and foreground palettes
 $dark-theme-background: (
   status-bar: #0070ad,
-  app-bar: map_get($mat-blue, 900),
+  app-bar: rgba(#fff, 0.72),
   background: #12abdb,
   hover: rgba(#fff, 0.04),
   card: map_get($mat-gray, 800),
