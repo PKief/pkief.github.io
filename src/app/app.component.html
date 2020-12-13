@@ -1,6 +1,14 @@
 <div class="app">
-  <div class="center-content">
-    <img src="assets/profile-image.png" alt="Profile Image" />
+  <!-- <mat-toolbar class="fixed-top"></mat-toolbar> -->
+  <div id="show-more-icon" appHideOnScroll>
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </div>
+  <div class="section full-height center-content">
+    <img
+      id="profile-image"
+      src="assets/profile-image.png"
+      alt="Profile Image"
+    />
     <div class="title">Philipp Kief</div>
     <div class="subtitle">Software Engineer</div>
     <div class="social">
@@ -15,7 +23,18 @@
       /></a>
     </div>
   </div>
-  <div id="show-more-icon" appHideOnScroll>
-    <mat-icon>keyboard_arrow_down</mat-icon>
+  <div class="section secondary center-content">
+    <h1 data-aos="fade-in">Projects</h1>
+    <div class="card-stack container-fluid">
+      <div class="card center-content" data-aos="fade-up"></div>
+      <div class="card center-content" data-aos="fade-up"></div>
+      <div class="card center-content" data-aos="fade-up"></div>
+      <div class="card center-content" data-aos="fade-up"></div>
+      <div class="card center-content" data-aos="fade-up"></div>
+    </div>
+  </div>
+  <div class="section secondary center-content">
+    <h1 data-aos="fade-in">Tech posts</h1>
+    <div class="card-stack container-fluid"></div>
   </div>
 </div>
