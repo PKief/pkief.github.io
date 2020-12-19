@@ -25,7 +25,7 @@
 // $light-theme: mat-light-theme($light-primary, $light-accent);
 
 @media (prefers-color-scheme: light) {
-  @include angular-material-theme($dark-theme);
+  @include angular-material-theme($light-theme);
   // @include custom-components-theme($light-theme);
 }
 

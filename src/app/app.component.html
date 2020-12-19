@@ -4,11 +4,13 @@
     <mat-icon>keyboard_arrow_down</mat-icon>
   </div>
   <div class="section full-height center-content">
-    <img
-      id="profile-image"
-      src="assets/profile-image.png"
-      alt="Profile Image"
-    />
+    <div>
+      <img
+        id="profile-image"
+        src="assets/profile-image.png"
+        alt="Profile Image"
+      />
+    </div>
     <div class="title">Philipp Kief</div>
     <div class="subtitle">Software Engineer</div>
     <div class="social">
@@ -25,16 +27,27 @@
   </div>
   <div class="section secondary center-content">
     <h1 data-aos="fade-in">Projects</h1>
-    <div class="card-stack container-fluid">
-      <div class="card center-content" data-aos="fade-up"></div>
-      <div class="card center-content" data-aos="fade-up"></div>
-      <div class="card center-content" data-aos="fade-up"></div>
-      <div class="card center-content" data-aos="fade-up"></div>
-      <div class="card center-content" data-aos="fade-up"></div>
+    <div id="project-cards" class="mt-3 container-sm">
+      <div data-aos="fade-in" class="row">
+        <div
+          class="project-card col-12 col-md-3"
+          *ngFor="let project of projects"
+        >
+          <img
+            class="project-image"
+            width="100px"
+            [src]="project.image"
+            alt="Logo"
+          />
+          <h2 class="project-title">{{ project.name }}</h2>
+
+          <p class="project-description">{{ project.description }}</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="section secondary center-content">
-    <h1 data-aos="fade-in">Tech posts</h1>
-    <div class="card-stack container-fluid"></div>
+    <div class="section tertiary center-content">
+      <h1 data-aos="fade-in">Tech posts</h1>
+      <div class="card-stack container-fluid"></div>
+    </div>
   </div>
 </div>

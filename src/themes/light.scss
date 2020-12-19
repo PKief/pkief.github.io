@@ -6,7 +6,7 @@ $light-theme-background: (
   app-bar: rgba(#fff, 0.4),
   background: #12abdb,
   hover: rgba(#1d1d1f, 0.4),
-  card: map_get($mat-red, 800),
+  card: white,
   dialog: map_get($mat-grey, 800),
   disabled-button: #000000,
   raised-button: map-get($mat-grey, 800),
