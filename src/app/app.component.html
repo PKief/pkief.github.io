@@ -31,7 +31,7 @@
       <div data-aos="fade-in" class="row">
         <div
           class="project-card col-12 col-md-3"
-          *ngFor="let project of projects"
+          *ngFor="let project of projects | async"
         >
           <img
             class="project-image"
@@ -45,9 +45,9 @@
         </div>
       </div>
     </div>
-    <div class="section tertiary center-content">
-      <h1 data-aos="fade-in">Tech posts</h1>
-      <div class="card-stack container-fluid"></div>
-    </div>
+  </div>
+  <div class="section tertiary center-content">
+    <h1 data-aos="fade-in">Tech posts</h1>
+    <div class="card-stack container-fluid"></div>
   </div>
 </div>

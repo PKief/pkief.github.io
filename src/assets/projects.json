@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Material Icon Theme",
+    "image": "https://github.com/PKief/vscode-material-icon-theme/raw/master/logo.png",
+    "imageAlt": "Logo",
+    "url": "https://github.com/PKief/vscode-material-icon-theme",
+    "description": "VS Code extension which replaces the default icons with Material Design Icons"
+  },
+  {
+    "name": "Material Color Converter",
+    "image": "https://raw.githubusercontent.com/PKief/material-color-converter/master/src/assets/logo.png",
+    "imageAlt": "Logo",
+    "url": "https://github.com/PKief/material-color-converter",
+    "description": "Color converter to find the corresponding color in the Material Design Color palette"
+  },
+  {
+    "name": "Markdown Checkbox",
+    "image": "https://raw.githubusercontent.com/PKief/vscode-markdown-checkbox/master/logo.png",
+    "imageAlt": "Logo",
+    "url": "https://github.com/PKief/vscode-markdown-checkbox",
+    "description": "VS Code extension to create and toggle checkboxes in Markdown documents"
+  },
+  {
+    "name": "Checkbox Snake",
+    "image": "https://raw.githubusercontent.com/PKief/checkbox-snake/master/logo.png",
+    "imageAlt": "Logo",
+    "url": "https://github.com/PKief/checkbox-snake",
+    "description": "Snake game with HTML checkboxes"
+  }
+]

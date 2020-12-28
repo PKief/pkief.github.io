@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import AOS from 'aos';
-import { projects } from './projects';
+import { Observable } from 'rxjs';
+import { Project } from './models/project';
+import { ProjectService } from './project/project.service';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +10,12 @@ import { projects } from './projects';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  title = 'personal-website';
-  projects: any[];
+  projects: Observable<Project[]>;
+
+  constructor(private projectService: ProjectService) {}
 
   ngOnInit() {
-    this.projects = projects;
+    this.projects = this.projectService.getProjects();
   }
 
   ngAfterViewInit() {
