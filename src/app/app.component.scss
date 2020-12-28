@@ -11,7 +11,7 @@ mat-toolbar {
   width: 100%;
   padding: 4rem 0;
 
-  &:not(&:first-child){
+  &:not(&:first-child) {
     margin: 4rem 0;
   }
 
@@ -44,23 +44,6 @@ img#profile-image {
   align-items: center;
   flex-direction: column;
   text-align: center;
-}
-
-.card-stack {
-  max-width: 50rem;
-}
-
-.card {
-  overflow: hidden;
-  z-index: 2;
-  background-repeat: no-repeat;
-  transform-origin: top center;
-  background-position: center center;
-  box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.09);
-  background-color: white;
-  height: 35rem;
-  margin-bottom: 5rem;
-  border-radius: 11px;
 }
 
 .title {
@@ -104,24 +87,4 @@ div#show-more-icon {
 
 .big-content {
   height: 200vh;
-}
-
-#project-cards {
-  display: flex;
-
-  .project-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
-    margin: 1rem 0;
-
-    .project-image {
-      padding-bottom: 1rem;
-    }
-
-    p.project-description {
-      color: #757575;
-    }
-  }
 }

@@ -27,26 +27,9 @@
   </div>
   <div class="section secondary center-content">
     <h1 data-aos="fade-in">Projects</h1>
-    <div id="project-cards" class="mt-3 container-sm">
-      <div data-aos="fade-in" class="row">
-        <div
-          class="project-card col-12 col-md-3"
-          *ngFor="let project of projects | async"
-        >
-          <img
-            class="project-image"
-            width="100px"
-            [src]="project.image"
-            alt="Logo"
-          />
-          <h2 class="project-title">{{ project.name }}</h2>
-
-          <p class="project-description">{{ project.description }}</p>
-        </div>
-      </div>
-    </div>
+    <app-project-list></app-project-list>
   </div>
-  <div class="section tertiary center-content">
+  <div data-aos="fade-in" class="section tertiary center-content">
     <h1 data-aos="fade-in">Tech posts</h1>
     <div class="card-stack container-fluid"></div>
   </div>
