@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import AOS from 'aos';
 import { Observable } from 'rxjs';
-import { Project } from './models/project';
+import { Project } from './project/models/project';
 import { ProjectService } from './project/project.service';
 
 @Component({

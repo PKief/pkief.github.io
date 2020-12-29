@@ -1,0 +1,24 @@
+.article-card {
+  text-align: left;
+  margin-bottom: 3rem;
+
+  .article-image {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    height: 10rem;
+  }
+
+  .article-details {
+    padding: 1rem 2rem;
+  }
+
+  .article-title {
+    font-weight: 100;
+  }
+
+  p.article-description {
+    color: #757575;
+    padding-bottom: 0.5rem;
+  }
+}

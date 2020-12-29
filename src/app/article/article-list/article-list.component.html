@@ -1,0 +1,20 @@
+<div id="article-cards" class="mt-3 container-sm">
+  <div
+    class="article-card row"
+    *ngFor="let article of articles | async"
+    data-aos="fade-in"
+  >
+    <div
+      class="article-image col-12 col-md-3"
+      [style.backgroundImage]="'url(' + article.image + ')'"
+    ></div>
+    <div class="article-details col-12 col-md-9">
+      <h2 class="article-title">{{ article.title }}</h2>
+
+      <p class="article-description">{{ article.subtitle }}</p>
+      <button mat-stroked-button (click)="goToLink(article.url)">
+        <span>Read</span>
+      </button>
+    </div>
+  </div>
+</div>
