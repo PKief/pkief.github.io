@@ -4,6 +4,11 @@
 
   mat-toolbar {
     backdrop-filter: saturate(180%) blur(20px);
+
+    // Improve performance for blur effects
+    transform: translateZ(0);
+    will-change: transform;
+
     background-color: mat-color($background, app-bar);
     border-bottom: 1.5px solid mat-color($background, status-bar);
     max-height: 3.3rem;
