@@ -14,7 +14,9 @@
       <h2 class="project-title">{{ project.name }}</h2>
 
       <p class="project-description">{{ project.description }}</p>
-      <button mat-stroked-button (click)="goToLink(project.url)">Open</button>
+      <button mat-stroked-button (click)="goToLink(project.url)">
+        <span>Open</span>
+      </button>
     </div>
   </div>
 </div>

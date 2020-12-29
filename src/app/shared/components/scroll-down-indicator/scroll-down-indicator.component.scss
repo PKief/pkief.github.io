@@ -1,0 +1,13 @@
+div#show-more-icon {
+  position: fixed;
+  bottom: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
+
+  mat-icon {
+    font-size: 2rem;
+    color: #b1b1b1;
+  }
+}

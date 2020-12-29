@@ -1,11 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from './material/material.module';
+import { NgModule } from '@angular/core';
+import { ScrollDownIndicatorComponent } from './components/scroll-down-indicator/scroll-down-indicator.component';
 import { HideOnScrollDirective } from './directives/hide-on-scroll.directive';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
-  declarations: [HideOnScrollDirective],
+  declarations: [HideOnScrollDirective, ScrollDownIndicatorComponent],
   imports: [MaterialModule, CommonModule],
-  exports: [MaterialModule, HideOnScrollDirective],
+  exports: [
+    MaterialModule,
+    HideOnScrollDirective,
+    ScrollDownIndicatorComponent,
+  ],
 })
 export class SharedModule {}
