@@ -1,0 +1,9 @@
+mat-toolbar {
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 2px solid #b1b1b14a;
+  max-height: 3.3rem;
+
+  &.hide {
+    display: none;
+  }
+}
