@@ -1,9 +1,20 @@
 mat-toolbar {
   backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 2px solid #b1b1b14a;
+  background-color: rgba(255, 255, 255, 0.72);
+  border-bottom: 1.5px solid #b1b1b14a;
   max-height: 3.3rem;
 
   &.hide {
     display: none;
+  }
+
+  .toolbar-title-area {
+    display: flex;
+    align-items: center;
+
+    .toolbar-title {
+      font-weight: 500;
+      font-size: 17px;
+    }
   }
 }
