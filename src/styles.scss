@@ -22,12 +22,12 @@
 @import "./themes/light.scss";
 @import "./themes/dark.scss";
 
-@media (prefers-color-scheme: light) {
-  @include angular-material-theme($dark-theme);
-  @include custom-components-theme($dark-theme);
+.light-theme {
+  @include angular-material-theme($light-theme);
+  @include custom-components-theme($light-theme);
 }
 
-@media (prefers-color-scheme: dark) {
+.dark-theme {
   @include angular-material-theme($dark-theme);
   @include custom-components-theme($dark-theme);
 }

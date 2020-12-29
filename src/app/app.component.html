@@ -1,4 +1,4 @@
-<div class="app">
+<div class="app" [ngClass]="theme | async">
   <app-toolbar></app-toolbar>
   <app-scroll-down-indicator></app-scroll-down-indicator>
   <app-section [colorTheme]="'primary'">
