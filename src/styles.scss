@@ -11,33 +11,25 @@
 ************************/
 
 // Custom themable components
-// @import "app/sidenav/sidenav.component";
-// @mixin custom-components-theme($theme) {
-//   @include sidenav-theme($theme);
-// }
+@import "app/shared/components/toolbar/toolbar.component";
+@import "app/shared/components/section/section.component";
+
+@mixin custom-components-theme($theme) {
+  @include toolbar-theme($theme);
+  @include section-theme($theme);
+}
 
 @import "./themes/light.scss";
 @import "./themes/dark.scss";
 
-// Light theme
-// $light-primary: mat-palette($mat-indigo);
-// $light-accent: mat-palette($mat-pink, A200, A100, A400);
-// $light-theme: mat-light-theme($light-primary, $light-accent);
-
 @media (prefers-color-scheme: light) {
-  @include angular-material-theme($light-theme);
-  // @include custom-components-theme($light-theme);
+  @include angular-material-theme($dark-theme);
+  @include custom-components-theme($dark-theme);
 }
-
-// Dark theme
-// $dark-primary: mat-palette($mat-blue-grey);
-// $dark-accent: mat-palette($mat-amber, A200, A100, A400);
-// $dark-warn: mat-palette($mat-deep-orange);
-// $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 
 @media (prefers-color-scheme: dark) {
   @include angular-material-theme($dark-theme);
-  // @include custom-components-theme($dark-theme);
+  @include custom-components-theme($dark-theme);
 }
 
 /************************

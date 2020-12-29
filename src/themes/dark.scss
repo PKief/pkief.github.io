@@ -2,12 +2,12 @@
 
 // custom background and foreground palettes
 $dark-theme-background: (
-  status-bar: #0070ad,
-  app-bar: rgba(#fff, 0.72),
-  background: #12abdb,
+  status-bar: #32373a,
+  app-bar: rgba(#000, 0.72),
+  background: #111111,
   hover: rgba(#fff, 0.04),
-  card: map_get($mat-gray, 800),
-  dialog: map_get($mat-grey, 800),
+  card: #191919,
+  dialog: #202020,
   disabled-button: $white-12-opacity,
   raised-button: map-get($mat-grey, 800),
   focused-button: $white-6-opacity,

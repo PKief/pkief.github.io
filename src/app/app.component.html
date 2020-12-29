@@ -1,7 +1,7 @@
 <div class="app">
   <app-toolbar></app-toolbar>
   <app-scroll-down-indicator></app-scroll-down-indicator>
-  <div class="section full-height center-content">
+  <app-section [colorTheme]="'primary'">
     <div>
       <img
         id="profile-image"
@@ -22,13 +22,13 @@
         ><img src="assets/icons/stack-overflow.png" alt="StackOverflow Logo"
       /></a>
     </div>
-  </div>
-  <div class="section full-height secondary center-content">
+  </app-section>
+  <app-section [colorTheme]="'secondary'">
     <h1 data-aos="fade-in">Projects</h1>
     <app-project-list></app-project-list>
-  </div>
-  <div data-aos="fade-in" class="section tertiary center-content">
+  </app-section>
+  <app-section [colorTheme]="'tertiary'">
     <h1 data-aos="fade-in">Articles</h1>
     <app-article-list></app-article-list>
-  </div>
+  </app-section>
 </div>

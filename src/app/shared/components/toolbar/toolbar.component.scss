@@ -1,20 +1,26 @@
-mat-toolbar {
-  backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(255, 255, 255, 0.72);
-  border-bottom: 1.5px solid #b1b1b14a;
-  max-height: 3.3rem;
+@mixin toolbar-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
 
-  &.hide {
-    display: none;
-  }
+  mat-toolbar {
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: mat-color($background, app-bar);
+    border-bottom: 1.5px solid mat-color($background, status-bar);
+    max-height: 3.3rem;
 
-  .toolbar-title-area {
-    display: flex;
-    align-items: center;
+    &.hide {
+      display: none;
+    }
 
-    .toolbar-title {
-      font-weight: 500;
-      font-size: 17px;
+    .toolbar-title-area {
+      display: flex;
+      align-items: center;
+
+      .toolbar-title {
+        font-weight: 500;
+        font-size: 17px;
+        color: mat-color($foreground, text);
+      }
     }
   }
 }

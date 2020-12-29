@@ -1,0 +1,43 @@
+@mixin section-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .section {
+    width: 100%;
+    padding: 4rem 0;
+    color: mat-color($foreground, text);
+
+    &:not(&:first-child) {
+      margin: 4rem 0;
+    }
+
+    h1 {
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    &.full-height {
+      min-height: 100%;
+    }
+
+    &.primary {
+      background-color: mat-color($background, background);
+    }
+
+    &.secondary {
+      background-color: mat-color($background, card);
+    }
+
+    &.tertiary {
+      background-color: mat-color($background, dialog);
+    }
+
+    &.center-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
