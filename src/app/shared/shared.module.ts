@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FooterComponent } from './components/footer/footer.component';
+import { IconComponent } from './components/icon/icon.component';
 import { ScrollDownIndicatorComponent } from './components/scroll-down-indicator/scroll-down-indicator.component';
 import { SectionComponent } from './components/section/section.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
@@ -14,6 +15,7 @@ import { MaterialModule } from './material/material.module';
     ToolbarComponent,
     SectionComponent,
     FooterComponent,
+    IconComponent,
   ],
   imports: [MaterialModule, CommonModule],
   exports: [
@@ -23,6 +25,7 @@ import { MaterialModule } from './material/material.module';
     ToolbarComponent,
     SectionComponent,
     FooterComponent,
+    IconComponent,
   ],
 })
 export class SharedModule {}

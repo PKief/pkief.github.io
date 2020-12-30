@@ -1,0 +1,8 @@
+@mixin icon-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .app-icon {
+    color: mat-color($foreground, icon);
+  }
+}

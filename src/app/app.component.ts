@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import AOS from 'aos';
 import { Observable } from 'rxjs';
+import { IconService } from './core/icon.service';
 import { ThemeService } from './core/theme.service';
 import { Project } from './project/models/project';
 import { ProjectService } from './project/project.service';
@@ -16,12 +17,14 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   constructor(
     private projectService: ProjectService,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private iconService: IconService
   ) {}
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
     this.theme = this.themeService.theme;
+    this.iconService.registerIcons();
   }
 
   ngAfterViewInit() {
