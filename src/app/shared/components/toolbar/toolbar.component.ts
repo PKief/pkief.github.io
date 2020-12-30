@@ -1,19 +1,21 @@
 import {
   AfterViewInit,
   Component,
-  ElementRef,
   HostListener,
+  OnInit,
   Renderer2,
   ViewChild,
 } from '@angular/core';
 import { MatToolbar } from '@angular/material/toolbar';
+import { Observable } from 'rxjs';
+import { ThemeService } from 'src/app/core/theme.service';
 
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss'],
 })
-export class ToolbarComponent implements AfterViewInit {
+export class ToolbarComponent implements OnInit, AfterViewInit {
   @ViewChild(MatToolbar)
   toolbar: MatToolbar;
 
@@ -22,7 +24,16 @@ export class ToolbarComponent implements AfterViewInit {
     this.toggleVisibility();
   }
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  theme: Observable<string>;
+
+  constructor(
+    private renderer: Renderer2,
+    private themeService: ThemeService
+  ) {}
+
+  ngOnInit() {
+    this.theme = this.themeService.theme;
+  }
 
   private toggleVisibility() {
     const scrollTop = document.scrollingElement.scrollTop;
@@ -31,7 +42,7 @@ export class ToolbarComponent implements AfterViewInit {
       .nativeElement as HTMLElement;
     const fadeInAnimation = 'animate__fadeInDown';
     const fadeOutAnimation = 'animate__fadeOutUp';
-    const threshold = 100;
+    const threshold = 200;
     if (scrollTop + threshold > clientHeight) {
       this.renderer.removeClass(toolbarElement, fadeOutAnimation);
       this.renderer.addClass(toolbarElement, fadeInAnimation);
@@ -47,5 +58,9 @@ export class ToolbarComponent implements AfterViewInit {
       'animate__animated'
     );
     this.toggleVisibility();
+  }
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
   }
 }

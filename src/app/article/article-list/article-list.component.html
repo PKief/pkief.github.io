@@ -4,10 +4,12 @@
     *ngFor="let article of articles | async"
     data-aos="fade-in"
   >
-    <div
-      class="article-image col-12 col-md-3"
-      [style.backgroundImage]="'url(' + article.image + ')'"
-    ></div>
+    <div class="col-12 col-md-3">
+      <div
+        class="article-image"
+        [style.backgroundImage]="'url(' + article.image + ')'"
+      ></div>
+    </div>
     <div class="article-details col-12 col-md-9">
       <h2 class="article-title">{{ article.title }}</h2>
 

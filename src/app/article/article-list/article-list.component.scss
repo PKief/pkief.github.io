@@ -6,11 +6,8 @@
     overflow: hidden;
     background-size: cover;
     background-position: center;
+    margin-bottom: 2rem;
     height: 10rem;
-  }
-
-  .article-details {
-    padding: 1rem 2rem;
   }
 
   .article-title {
@@ -20,5 +17,9 @@
   p.article-description {
     color: #757575;
     padding-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 25px;
+    letter-spacing: 0.8px;
+    font-weight: 300;
   }
 }

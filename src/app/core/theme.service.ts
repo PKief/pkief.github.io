@@ -6,30 +6,30 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ThemeService {
   availableThemes = ['dark-theme', 'light-theme'];
+  colorSchemeMedia: MediaQueryList;
   theme: BehaviorSubject<string> = new BehaviorSubject('light-theme');
 
   constructor() {
-    const theme = localStorage.getItem(window.location.host);
-    const detectPreferredColorScheme = (e: MediaQueryListEvent): void => {
-      const themeName = e.matches ? 'dark-theme' : 'light-theme';
-      this.theme.next(themeName);
-    };
+    const theme = sessionStorage.getItem(window.location.host);
 
-    const colorSchemeMedia = window.matchMedia?.(
-      '(prefers-color-scheme: dark)'
-    );
-    colorSchemeMedia.addEventListener('change', detectPreferredColorScheme);
+    this.colorSchemeMedia = window.matchMedia?.('(prefers-color-scheme: dark)');
+    this.addPrefersColorEventListener();
 
     if (theme) {
       this.theme.next(theme);
-      colorSchemeMedia.removeEventListener(
-        'change',
-        detectPreferredColorScheme
-      );
+      this.removePrefersColorSchemaEventListener();
     } else {
-      if (colorSchemeMedia.matches) {
+      if (this.colorSchemeMedia.matches) {
         this.theme.next('dark-theme');
       }
+    }
+  }
+
+  toggleTheme() {
+    if (this.theme.value === 'dark-theme') {
+      this.changeTheme('light-theme');
+    } else {
+      this.changeTheme('dark-theme');
     }
   }
 
@@ -38,18 +38,40 @@ export class ThemeService {
    * Saved in the local storage to reuse it for the next session.
    * @param theme Theme name
    */
-  changeTheme(theme: string) {
+  private changeTheme(theme: string) {
     if (this.availableThemes.indexOf(theme) !== -1) {
       this.theme.next(theme);
-      localStorage.setItem(window.location.host, theme);
+      sessionStorage.setItem(window.location.host, theme);
+      this.removePrefersColorSchemaEventListener();
     }
+  }
+
+  private addPrefersColorEventListener() {
+    this.colorSchemeMedia.addEventListener(
+      'change',
+      this.getPrefersColorSchemeCallback(this.theme)
+    );
+  }
+
+  private removePrefersColorSchemaEventListener() {
+    this.colorSchemeMedia.removeEventListener(
+      'change',
+      this.getPrefersColorSchemeCallback(this.theme)
+    );
   }
 
   /**
    * Check if theme is available
    * @param theme Theme name
    */
-  validateTheme(theme: string) {
+  private validateTheme(theme: string) {
     return this.availableThemes.some((t) => t === theme);
+  }
+
+  private getPrefersColorSchemeCallback(theme: BehaviorSubject<string>) {
+    return (e: MediaQueryListEvent): void => {
+      const themeName = e.matches ? 'dark-theme' : 'light-theme';
+      theme.next(themeName);
+    };
   }
 }

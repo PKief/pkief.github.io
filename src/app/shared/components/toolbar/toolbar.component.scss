@@ -17,6 +17,12 @@
       display: none;
     }
 
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     .toolbar-title-area {
       display: flex;
       align-items: center;
@@ -25,6 +31,14 @@
         font-weight: 500;
         font-size: 17px;
         color: mat-color($foreground, text);
+      }
+    }
+
+    .dark-mode-toggle-area {
+      font-size: 2rem;
+
+      mat-icon.mat-icon {
+        font-size: 1.5rem;
       }
     }
   }
