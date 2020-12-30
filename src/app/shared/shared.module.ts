@@ -4,12 +4,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ScrollDownIndicatorComponent } from './components/scroll-down-indicator/scroll-down-indicator.component';
 import { SectionComponent } from './components/section/section.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { HideOnScrollDirective } from './directives/hide-on-scroll.directive';
+import { ShowOnTopDirective } from './directives/show-on-top.directive';
 import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
-    HideOnScrollDirective,
+    ShowOnTopDirective,
     ScrollDownIndicatorComponent,
     ToolbarComponent,
     SectionComponent,
@@ -18,7 +18,7 @@ import { MaterialModule } from './material/material.module';
   imports: [MaterialModule, CommonModule],
   exports: [
     MaterialModule,
-    HideOnScrollDirective,
+    ShowOnTopDirective,
     ScrollDownIndicatorComponent,
     ToolbarComponent,
     SectionComponent,
