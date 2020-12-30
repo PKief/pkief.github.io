@@ -9,8 +9,28 @@
     width: 100%;
     justify-content: center;
 
+    #show-more-icon {
+      animation: bounce 5s infinite;
+    }
+
     mat-icon {
       color: mat-color($foreground, icon);
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    75%,
+    83%,
+    92%,
+    100% {
+      transform: translateY(0);
+    }
+    80% {
+      transform: translateY(-10px);
+    }
+    87% {
+      transform: translateY(-5px);
     }
   }
 }
