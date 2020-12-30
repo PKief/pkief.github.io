@@ -1,9 +1,9 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   Input,
-  OnInit,
   Renderer2,
   ViewChild,
 } from '@angular/core';
@@ -12,6 +12,7 @@ import {
   selector: 'app-section',
   templateUrl: './section.component.html',
   styleUrls: ['./section.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectionComponent implements AfterViewInit {
   @ViewChild('section')

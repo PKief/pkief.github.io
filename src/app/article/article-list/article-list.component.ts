@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ArticleService } from '../article.service';
 import { Article } from '../models/article';
@@ -7,6 +7,7 @@ import { Article } from '../models/article';
   selector: 'app-article-list',
   templateUrl: './article-list.component.html',
   styleUrls: ['./article-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ArticleListComponent implements OnInit {
   articles: Observable<Article[]>;
