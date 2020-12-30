@@ -13,10 +13,18 @@
 // Custom themable components
 @import "app/shared/components/toolbar/toolbar.component";
 @import "app/shared/components/section/section.component";
+@import "app/shared/components/footer/footer.component";
+@import "app/project/project-list/project-list.component";
+@import "app/article/article-list/article-list.component";
+@import "app/app.component";
 
 @mixin custom-components-theme($theme) {
   @include toolbar-theme($theme);
   @include section-theme($theme);
+  @include footer-theme($theme);
+  @include project-list-theme($theme);
+  @include article-list-theme($theme);
+  @include app-theme($theme);
 }
 
 @import "./themes/light.scss";

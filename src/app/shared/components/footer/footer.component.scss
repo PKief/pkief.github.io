@@ -1,0 +1,40 @@
+@mixin footer-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .footer {
+    background-color: mat-color($background, background);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 21rem;
+  }
+
+  h1 {
+    color: mat-color($foreground, text);
+  }
+
+  .social {
+    a {
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    img {
+      width: 3rem;
+      padding: 0 0.5rem 0 0.5rem;
+    }
+  }
+
+  p.copyright {
+    color: mat-color($foreground, secondary-text);
+    margin-top: 2rem;
+    font-variant: all-petite-caps;
+    font-size: 1.2rem;
+  }
+}

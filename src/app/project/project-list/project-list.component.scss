@@ -1,29 +1,34 @@
-#project-cards {
-  display: flex;
+@mixin project-list-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
 
-  .project-card {
+  #project-cards {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
-    margin: 3rem 0;
 
-    .project-image {
-      padding-bottom: 1rem;
-    }
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1rem;
+      margin: 3rem 0;
 
-    .project-title {
-      font-weight: 100;
-    }
+      .project-image {
+        padding-bottom: 1rem;
+      }
 
-    p.project-description {
-      color: #757575;
-      padding-bottom: 0.5rem;
-      max-width: 15rem;
-      font-size: 1rem;
-      line-height: 25px;
-      letter-spacing: 0.8px;
-      font-weight: 300;
+      .project-title {
+        font-weight: 100;
+      }
+
+      p.project-description {
+        color: mat-color($foreground, secondary-text);
+        padding-bottom: 0.5rem;
+        max-width: 20rem;
+        font-size: 1rem;
+        line-height: 25px;
+        letter-spacing: 0.8px;
+        font-weight: 300;
+      }
     }
   }
 }

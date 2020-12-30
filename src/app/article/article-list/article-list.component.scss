@@ -1,25 +1,30 @@
-.article-card {
-  text-align: left;
-  margin-bottom: 3rem;
+@mixin article-list-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
 
-  .article-image {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 2rem;
-    height: 10rem;
-  }
+  .article-card {
+    text-align: left;
+    margin-bottom: 3rem;
 
-  .article-title {
-    font-weight: 100;
-  }
+    .article-image {
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 2rem;
+      height: 10rem;
+    }
 
-  p.article-description {
-    color: #757575;
-    padding-bottom: 0.5rem;
-    font-size: 1rem;
-    line-height: 25px;
-    letter-spacing: 0.8px;
-    font-weight: 300;
+    .article-title {
+      font-weight: 100;
+    }
+
+    p.article-description {
+      color: mat-color($foreground, secondary-text);
+      padding-bottom: 0.5rem;
+      font-size: 1rem;
+      line-height: 25px;
+      letter-spacing: 0.8px;
+      font-weight: 300;
+    }
   }
 }
