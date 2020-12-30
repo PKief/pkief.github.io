@@ -16,25 +16,7 @@
     color: mat-color($foreground, text);
   }
 
-  .social {
-    a {
-      opacity: 0.8;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    img {
-      width: 3rem;
-      padding: 0 0.5rem 0 0.5rem;
-    }
-  }
-
   p.copyright {
-    color: mat-color($foreground, secondary-text);
-    margin-top: 2rem;
-    font-variant: all-petite-caps;
-    font-size: 1.2rem;
+    color: mat-color($foreground, hint-text);
   }
 }

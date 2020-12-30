@@ -4,6 +4,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { IconComponent } from './components/icon/icon.component';
 import { ScrollDownIndicatorComponent } from './components/scroll-down-indicator/scroll-down-indicator.component';
 import { SectionComponent } from './components/section/section.component';
+import { SocialLinksComponent } from './components/social-links/social-links.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { ShowOnTopDirective } from './directives/show-on-top.directive';
 import { MaterialModule } from './material/material.module';
@@ -16,6 +17,7 @@ import { MaterialModule } from './material/material.module';
     SectionComponent,
     FooterComponent,
     IconComponent,
+    SocialLinksComponent,
   ],
   imports: [MaterialModule, CommonModule],
   exports: [
@@ -26,6 +28,7 @@ import { MaterialModule } from './material/material.module';
     SectionComponent,
     FooterComponent,
     IconComponent,
+    SocialLinksComponent,
   ],
 })
 export class SharedModule {}

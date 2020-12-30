@@ -12,6 +12,7 @@
     background-color: mat-color($background, app-bar);
     border-bottom: 1.5px solid mat-color($background, status-bar);
     max-height: 3.3rem;
+    padding: 0;
 
     &.hide {
       display: none;
