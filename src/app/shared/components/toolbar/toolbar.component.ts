@@ -22,9 +22,11 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
   @HostListener('window:scroll', ['$event'])
   onScroll() {
     this.toggleVisibility();
+    this.hasScrolled = true;
   }
 
   theme: Observable<string>;
+  hasScrolled = false;
 
   constructor(
     private renderer: Renderer2,
@@ -42,11 +44,13 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
       .nativeElement as HTMLElement;
     const fadeInAnimation = 'animate__fadeInDown';
     const fadeOutAnimation = 'animate__fadeOutUp';
+    const hideClass = 'hide';
     const threshold = 200;
     if (scrollTop + threshold > clientHeight) {
       this.renderer.removeClass(toolbarElement, fadeOutAnimation);
+      this.renderer.removeClass(toolbarElement, hideClass);
       this.renderer.addClass(toolbarElement, fadeInAnimation);
-    } else {
+    } else if (this.hasScrolled) {
       this.renderer.removeClass(toolbarElement, fadeInAnimation);
       this.renderer.addClass(toolbarElement, fadeOutAnimation);
     }
