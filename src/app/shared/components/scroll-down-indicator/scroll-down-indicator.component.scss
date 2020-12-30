@@ -1,13 +1,16 @@
-div#show-more-icon {
-  position: fixed;
-  bottom: 1rem;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  cursor: pointer;
+@mixin scroll-down-indicator-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
 
-  mat-icon {
-    font-size: 2rem;
-    color: #b1b1b1;
+  #show-more-icon-panel {
+    position: fixed;
+    bottom: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    mat-icon {
+      color: mat-color($foreground, icon);
+    }
   }
 }
