@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArticleModule } from './article/article.module';
 import { CoreModule } from './core/core.module';
+import { ProfileModule } from './profile/profile.module';
 import { ProjectModule } from './project/project.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -15,6 +16,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ProfileModule,
     SharedModule,
     ProjectModule,
     ArticleModule,

@@ -16,6 +16,7 @@
 @import "app/shared/components/footer/footer.component";
 @import "app/shared/components/social-links/social-links.component";
 @import "app/shared/components/scroll-down-indicator/scroll-down-indicator.component";
+@import "app/profile/profile-list/profile-list.component";
 @import "app/project/project-list/project-list.component";
 @import "app/article/article-list/article-list.component";
 @import "app/app.component";
@@ -24,6 +25,7 @@
   @include toolbar-theme($theme);
   @include section-theme($theme);
   @include footer-theme($theme);
+  @include profile-list-theme($theme);
   @include project-list-theme($theme);
   @include article-list-theme($theme);
   @include app-theme($theme);

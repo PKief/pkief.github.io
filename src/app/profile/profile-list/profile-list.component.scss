@@ -1,0 +1,23 @@
+@mixin profile-list-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .profile-title {
+    color: mat-color($foreground, secondary-text);
+    letter-spacing: 1.4px;
+    font-variant: all-small-caps;
+    font-size: 1.1rem;
+  }
+
+  .profile-content {
+    padding: 0.5rem 0;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+    max-width: calc(100vw - 7rem);
+    font-size: 1.2rem;
+  }
+
+  .profile-entry {
+    margin-bottom: 3rem;
+  }
+}

@@ -19,7 +19,7 @@ export class SectionComponent implements AfterViewInit {
   section: ElementRef;
 
   @Input()
-  colorTheme: string;
+  colorTheme = 'primary';
 
   constructor(private renderer: Renderer2) {}
 

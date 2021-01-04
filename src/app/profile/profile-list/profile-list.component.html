@@ -1,0 +1,12 @@
+<div class="profile-list">
+  <div
+    data-aos="fade-in"
+    class="profile-entry"
+    *ngFor="let entry of profileEntries | async"
+  >
+    <div class="profile-title">{{ entry.title }}</div>
+    <h2 class="profile-content">
+      {{ entry.content }}
+    </h2>
+  </div>
+</div>

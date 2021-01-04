@@ -1,0 +1,16 @@
+[
+  { "title": "age", "content": 26 },
+  { "title": "Location", "content": "Stuttgart, Germany" },
+  { "title": "Programming Experience", "content": "3 years" },
+  { "title": "Technical Interest", "content": "Frontend, UI/UX, Cloud" },
+  {
+    "title": "Programming Languages",
+    "content": "JavaScript, TypeScript, Java, Python"
+  },
+  {
+    "title": "University",
+    "content": "University of Applied Sciences (Karlsruhe, Germany)"
+  },
+  { "title": "Graduation", "content": "Business Information Systems (M.Sc.)" },
+  { "title": "Favorite Color", "content": "#42A5F5" }
+]
