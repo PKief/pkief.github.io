@@ -14,7 +14,11 @@
       <h2 class="article-title">{{ article.title }}</h2>
 
       <p class="article-description">{{ article.subtitle }}</p>
-      <button mat-stroked-button (click)="goToLink(article.url)">
+      <button
+        mat-stroked-button
+        color="primary"
+        (click)="goToLink(article.url)"
+      >
         <span>Read</span>
       </button>
     </div>

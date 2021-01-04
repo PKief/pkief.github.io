@@ -1,32 +1,39 @@
+@import "./../../mixins.scss";
+
 @mixin profile-list-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
   #profile-list {
-    .mat-icon {
-      width: 30px;
-      height: 30px;
-      font-size: 30px;
-      color: mat-color($foreground, icon);
-    }
-
-    .profile-title {
-      color: mat-color($foreground, secondary-text);
-      letter-spacing: 1.4px;
-      font-variant: all-small-caps;
-      font-size: 1.1rem;
-    }
-
-    .profile-content {
-      padding: 0.5rem 0;
-      letter-spacing: 0.2px;
-      font-weight: 400;
-      max-width: 17rem;
-      font-size: 20px;
-    }
-
     .profile-entry {
-      margin: 3rem 4rem;
+      margin: 3rem 0rem;
+      width: 22rem;
+
+      @include mobile-device() {
+        width: initial;
+      }
+
+      .mat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 50px;
+        margin-bottom: 22px;
+        color: mat-color($foreground, icon);
+      }
+
+      .profile-title {
+        color: mat-color($foreground, secondary-text);
+        letter-spacing: 1.4px;
+        font-variant: all-small-caps;
+        font-size: 1.1rem;
+      }
+
+      .profile-content {
+        padding: 0.5rem 4rem;
+        letter-spacing: 0.2px;
+        font-weight: 500;
+        font-size: 18px;
+      }
     }
   }
 }
