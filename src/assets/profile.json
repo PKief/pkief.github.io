@@ -1,16 +1,28 @@
 [
-  { "title": "age", "content": 26 },
-  { "title": "Location", "content": "Stuttgart, Germany" },
-  { "title": "Programming Experience", "content": "3 years" },
-  { "title": "Technical Interest", "content": "Frontend, UI/UX, Cloud" },
+  { "title": "Location", "content": "Stuttgart, Germany", "icon": "place" },
+  {
+    "title": "Professional Experience",
+    "content": "3 years",
+    "icon": "engineering"
+  },
+  {
+    "title": "Technical Interest",
+    "content": "Frontend, UI/UX, Cloud",
+    "icon": "psychology"
+  },
   {
     "title": "Programming Languages",
-    "content": "JavaScript, TypeScript, Java, Python"
+    "content": "JavaScript, TypeScript, Java, Python",
+    "icon": "keyboard"
   },
   {
     "title": "University",
-    "content": "University of Applied Sciences (Karlsruhe, Germany)"
+    "content": "University of Applied Sciences (Karlsruhe, Germany)",
+    "icon": "school"
   },
-  { "title": "Graduation", "content": "Business Information Systems (M.Sc.)" },
-  { "title": "Favorite Color", "content": "#42A5F5" }
+  {
+    "title": "Graduation",
+    "content": "Business Information Systems (M.Sc.)",
+    "icon": "military_tech"
+  }
 ]
