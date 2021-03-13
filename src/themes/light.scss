@@ -20,7 +20,7 @@ $light-theme-background: (
 
 $light-theme-foreground: (
   base: #1d1d1f,
-  divider: #000000,
+  divider: #E0E0E0,
   dividers: #000000,
   disabled: rgba(#1d1d1f, 1),
   disabled-button: rgba(#1d1d1f, 1),
@@ -70,8 +70,32 @@ $theme-primary: (
   ),
 );
 
+$theme-accent: (
+  50: #EC407A,
+  100: #EC407A,
+  200: #EC407A,
+  300: #EC407A,
+  500: #EC407A,
+  900: #aaaaaa,
+  A100: #aaaaaa,
+  A200: #aaaaaa,
+  A400: #aaaaaa,
+  A700: #aaaaaa,
+  contrast: (
+    50: #EC407A,
+    100: #EC407A,
+    200: #EC407A,
+    300: #EC407A,
+    900: #EC407A,
+    A100: #EC407A,
+    A200: #EC407A,
+    A400: #EC407A,
+    A700: #EC407A,
+  ),
+);
+
 $light-theme-primary: mat-palette($theme-primary);
-$light-theme-accent: mat-palette($mat-blue);
+$light-theme-accent: mat-palette($mat-pink);
 $light-theme-warn: mat-palette($mat-red);
 
 $light-theme: create-light-theme(
