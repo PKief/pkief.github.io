@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Global Error Handling in Angular",
+    "url": "https://pkief.medium.com/global-error-handling-in-angular-ea395ce174b1?source=your_stories_page",
+    "subtitle": "Learn how to automatically catch all errors in a web application written in Angular and process them accordingly",
+    "image": "https://miro.medium.com/max/2835/1*2hTxY3GqPjd0vexILRsgmQ.png",
+    "imageAlt": "Cover"
+  },
+  {
+    "title": "Automatic Dark Mode Detection in Angular Material",
+    "url": "https://pkief.medium.com/automatic-dark-mode-detection-in-angular-material-8342917885a0?source=your_stories_page",
+    "subtitle": "How to make Angular applications ready for Dark Mode",
+    "image": "https://miro.medium.com/max/2835/1*DILtWhS2eUBnFqUR7tXxtg.png",
+    "imageAlt": "Cover"
+  },
+  {
+    "title": "How to debug TypeScript with VS Code",
+    "url": "https://pkief.medium.com/how-to-debug-typescript-with-vs-code-9cec93b4ae56?source=your_stories_page",
+    "subtitle": "Learn how to setup a small TypeScript project and debug it with VS Code.",
+    "image": "https://miro.medium.com/max/2643/1*uSrSYdCfkd6ccC4Sc-rmsA.png",
+    "imageAlt": "Cover"
+  },
+  {
+    "title": "How to create Angular Desktop Apps",
+    "url": "https://pkief.medium.com/angular-desktop-apps-a9ce9e3574e8?source=your_stories_page",
+    "subtitle": "Create desktop apps based on Angular CLI and Electron",
+    "image": "https://miro.medium.com/max/1800/1*SyKFADUT9a6oGvKLrDBC6g.png",
+    "imageAlt": "Cover"
+  }
+]
