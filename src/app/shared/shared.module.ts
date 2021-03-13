@@ -5,6 +5,7 @@ import { IconComponent } from './components/icon/icon.component';
 import { ScrollDownIndicatorComponent } from './components/scroll-down-indicator/scroll-down-indicator.component';
 import { SectionComponent } from './components/section/section.component';
 import { SocialLinksComponent } from './components/social-links/social-links.component';
+import { SponsorButtonComponent } from './components/sponsor-button/sponsor-button.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { ShowOnTopDirective } from './directives/show-on-top.directive';
 import { MaterialModule } from './material/material.module';
@@ -18,6 +19,7 @@ import { MaterialModule } from './material/material.module';
     FooterComponent,
     IconComponent,
     SocialLinksComponent,
+    SponsorButtonComponent,
   ],
   imports: [MaterialModule, CommonModule],
   exports: [
@@ -29,6 +31,7 @@ import { MaterialModule } from './material/material.module';
     FooterComponent,
     IconComponent,
     SocialLinksComponent,
+    SponsorButtonComponent,
   ],
 })
 export class SharedModule {}
