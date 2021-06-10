@@ -1,7 +1,7 @@
 [
   {
     "name": "Material Icon Theme",
-    "image": "https://github.com/PKief/vscode-material-icon-theme/raw/master/logo.png",
+    "image": "https://github.com/PKief/vscode-material-icon-theme/raw/main/logo.png",
     "imageAlt": "Logo",
     "sourceUrl": "https://github.com/PKief/vscode-material-icon-theme",
     "url": "https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme",
