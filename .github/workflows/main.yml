@@ -13,7 +13,7 @@ jobs:
       - name: Install node_modules 📦
         run: npm install
       - name: Build and deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v2
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BASE_BRANCH: main
@@ -21,7 +21,7 @@ jobs:
           FOLDER: dist/personal-website
           BUILD_SCRIPT: npm run build -- --prod
       - name: Cache node_modules 💾
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
