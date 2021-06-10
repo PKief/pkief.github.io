@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @mixin social-links-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
@@ -5,7 +6,7 @@
   .social {
     a {
       opacity: 0.8;
-      color: mat-color($foreground, icon);
+      color: mat.get-color-from-palette($foreground, icon);
       margin: 0 0.5rem;
 
       mat-icon {

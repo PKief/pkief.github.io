@@ -1,10 +1,11 @@
+@use '~@angular/material' as mat;
 @import "~@angular/material/theming";
 @import "bootstrap/scss/bootstrap-grid.scss";
 @import "bootstrap/scss/utilities/_spacing.scss";
 @import "bootstrap/scss/utilities/_position.scss";
 @import "bootstrap/scss/utilities/_align.scss";
 
-@include mat-core();
+@include mat.core();
 
 /************************
  Theming section
@@ -39,12 +40,12 @@
 @import "./themes/dark.scss";
 
 .light-theme {
-  @include angular-material-theme($light-theme);
+  @include mat.all-component-themes($light-theme);
   @include custom-components-theme($light-theme);
 }
 
 .dark-theme {
-  @include angular-material-theme($dark-theme);
+  @include mat.all-component-themes($dark-theme);
   @include custom-components-theme($dark-theme);
 }
 

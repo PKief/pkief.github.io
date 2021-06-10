@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import "~@angular/material/theming";
 
 // custom background and foreground palettes
@@ -9,12 +10,12 @@ $light-theme-background: (
   card: rgb(245, 245, 245),
   dialog: #eee,
   disabled-button: #000000,
-  raised-button: map-get($mat-grey, 800),
+  raised-button: map-get(mat.$grey-palette, 800),
   focused-button: #000000,
-  selected-button: map_get($mat-grey, 900),
-  selected-disabled-button: map_get($mat-grey, 800),
+  selected-button: map_get(mat.$grey-palette, 900),
+  selected-disabled-button: map_get(mat.$grey-palette, 800),
   disabled-button-toggle: black,
-  unselected-chip: map_get($mat-grey, 700),
+  unselected-chip: map_get(mat.$grey-palette, 700),
   disabled-list-option: black,
 );
 
@@ -27,7 +28,7 @@ $light-theme-foreground: (
   disabled-text: rgba(#1d1d1f, 1),
   hint-text: rgba(#1d1d1f, 0.8),
   secondary-text: rgba(#1d1d1f, 1),
-  icon: map-get($mat-grey, 600),
+  icon: map-get(mat.$grey-palette, 600),
   icons: #1d1d1f,
   text: #1d1d1f,
   slider-min: #1d1d1f,
@@ -35,7 +36,7 @@ $light-theme-foreground: (
   slider-off-active: rgba(#1d1d1f, 1),
 );
 
-@function create-light-theme($primary, $accent, $warn: mat-palette($mat-red)) {
+@function create-light-theme($primary, $accent, $warn: mat.define-palette(mat.$red-palette)) {
   @return (
     primary: $primary,
     accent: $accent,
@@ -94,9 +95,9 @@ $theme-accent: (
   ),
 );
 
-$light-theme-primary: mat-palette($theme-primary);
-$light-theme-accent: mat-palette($mat-pink);
-$light-theme-warn: mat-palette($mat-red);
+$light-theme-primary: mat.define-palette($theme-primary);
+$light-theme-accent: mat.define-palette(mat.$pink-palette);
+$light-theme-warn: mat.define-palette(mat.$red-palette);
 
 $light-theme: create-light-theme(
   $light-theme-primary,

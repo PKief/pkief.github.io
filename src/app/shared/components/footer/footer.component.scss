@@ -1,9 +1,10 @@
+@use '~@angular/material' as mat;
 @mixin footer-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
   .footer {
-    background-color: mat-color($background, background);
+    background-color: mat.get-color-from-palette($background, background);
     display: flex;
     width: 100%;
     justify-content: center;
@@ -13,11 +14,11 @@
   }
 
   h1 {
-    color: mat-color($foreground, text);
+    color: mat.get-color-from-palette($foreground, text);
   }
 
   p.copyright {
-    color: mat-color($foreground, hint-text);
+    color: mat.get-color-from-palette($foreground, hint-text);
     letter-spacing: 0.5px;
     font-size: 1.1rem;
     font-variant: all-small-caps;

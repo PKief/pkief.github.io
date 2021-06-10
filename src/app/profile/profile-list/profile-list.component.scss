@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import "./../../mixins.scss";
 
 @mixin profile-list-theme($theme) {
@@ -18,11 +19,11 @@
         height: 50px;
         font-size: 50px;
         margin-bottom: 22px;
-        color: mat-color($foreground, icon);
+        color: mat.get-color-from-palette($foreground, icon);
       }
 
       .profile-title {
-        color: mat-color($foreground, secondary-text);
+        color: mat.get-color-from-palette($foreground, secondary-text);
         letter-spacing: 1.4px;
         font-variant: all-small-caps;
         font-size: 1.1rem;

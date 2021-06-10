@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @mixin section-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
@@ -5,7 +6,7 @@
   .section {
     width: 100%;
     padding: 4rem 0;
-    color: mat-color($foreground, text);
+    color: mat.get-color-from-palette($foreground, text);
 
     &:not(&:first-child) {
       margin: 4rem 0;
@@ -21,15 +22,15 @@
     }
 
     &.primary {
-      background-color: mat-color($background, background);
+      background-color: mat.get-color-from-palette($background, background);
     }
 
     &.secondary {
-      background-color: mat-color($background, card);
+      background-color: mat.get-color-from-palette($background, card);
     }
 
     &.tertiary {
-      background-color: mat-color($background, dialog);
+      background-color: mat.get-color-from-palette($background, dialog);
     }
 
     &.center-content {

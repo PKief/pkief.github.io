@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import "./../../mixins.scss";
 
 @mixin project-list-theme($theme) {
@@ -32,7 +33,7 @@
       }
 
       p.project-description {
-        color: mat-color($foreground, secondary-text);
+        color: mat.get-color-from-palette($foreground, secondary-text);
         padding-bottom: 0.5rem;
         max-width: 16rem;
         font-size: 1rem;

@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import "~@angular/material/theming";
 
 // custom background and foreground palettes
@@ -9,12 +10,12 @@ $dark-theme-background: (
   card: #191919,
   dialog: #202020,
   disabled-button: $white-12-opacity,
-  raised-button: map-get($mat-grey, 800),
+  raised-button: map-get(mat.$grey-palette, 800),
   focused-button: $white-6-opacity,
-  selected-button: map_get($mat-grey, 900),
-  selected-disabled-button: map_get($mat-grey, 800),
+  selected-button: map_get(mat.$grey-palette, 900),
+  selected-disabled-button: map_get(mat.$grey-palette, 800),
   disabled-button-toggle: black,
-  unselected-chip: map_get($mat-grey, 700),
+  unselected-chip: map_get(mat.$grey-palette, 700),
   disabled-list-option: black,
 );
 
@@ -35,7 +36,7 @@ $dark-theme-foreground: (
   slider-off-active: rgba(#fff, 0.3),
 );
 
-@function create-dark-theme($primary, $accent, $warn: mat-palette($mat-red)) {
+@function create-dark-theme($primary, $accent, $warn: mat.define-palette(mat.$red-palette)) {
   @return (
     primary: $primary,
     accent: $accent,
@@ -70,9 +71,9 @@ $theme-primary: (
   ),
 );
 
-$dark-theme-primary: mat-palette($theme-primary);
-$dark-theme-accent: mat-palette($mat-pink);
-$dark-theme-warn: mat-palette($mat-red);
+$dark-theme-primary: mat.define-palette($theme-primary);
+$dark-theme-accent: mat.define-palette(mat.$pink-palette);
+$dark-theme-warn: mat.define-palette(mat.$red-palette);
 
 $dark-theme: create-dark-theme(
   $dark-theme-primary,

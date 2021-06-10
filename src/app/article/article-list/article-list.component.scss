@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @mixin article-list-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
@@ -23,7 +24,7 @@
     }
 
     p.article-description {
-      color: mat-color($foreground, secondary-text);
+      color: mat.get-color-from-palette($foreground, secondary-text);
       padding-bottom: 0.5rem;
       font-size: 1rem;
       line-height: 25px;
