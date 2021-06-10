@@ -7,19 +7,25 @@ jobs:
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+
+      - name: Setup NodeJS ⚙
+        uses: actions/setup-node@v2
         with:
           node-version: "14"
+
       - name: Install node_modules 📦
         run: npm install
-      - name: Build and deploy 🚀
+
+      - name: Build 🔧
+        run: npm run build
+
+      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BASE_BRANCH: main
-          BRANCH: gh-pages
-          FOLDER: dist/personal-website
-          BUILD_SCRIPT: npm run build -- --prod
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages
+          folder: dist/personal-website
+
       - name: Cache node_modules 💾
         uses: actions/cache@v2
         with:
