@@ -1,7 +1,7 @@
 [
   {
     "name": "Material Icon Theme",
-    "image": "https://github.com/PKief/vscode-material-icon-theme/raw/master/logo.png",
+    "image": "https://github.com/PKief/vscode-material-icon-theme/raw/main/logo.png",
     "imageAlt": "Logo",
     "sourceUrl": "https://github.com/PKief/vscode-material-icon-theme",
     "url": "https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme",
@@ -30,6 +30,14 @@
     "sourceUrl": "https://github.com/PKief/checkbox-snake",
     "url": "https://pkief.github.io/checkbox-snake/",
     "description": "Snake game with HTML checkboxes"
+  },
+  {
+    "name": "Material Product Icons",
+    "image": "https://raw.githubusercontent.com/PKief/vscode-material-product-icons/master/logo.png",
+    "imageAlt": "Logo",
+    "sourceUrl": "https://github.com/PKief/vscode-material-product-icons",
+    "url": "https://marketplace.visualstudio.com/items?itemName=PKief.material-product-icons",
+    "description": "Extension which replaces the VS Code default icons with the Material Design icons."
   },
   {
     "name": "Events Chatbot",
