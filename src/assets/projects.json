@@ -32,6 +32,14 @@
     "description": "Snake game with HTML checkboxes"
   },
   {
+    "name": "Material Product Icons",
+    "image": "https://raw.githubusercontent.com/PKief/vscode-material-product-icons/master/logo.png",
+    "imageAlt": "Logo",
+    "sourceUrl": "https://github.com/PKief/vscode-material-product-icons",
+    "url": "https://marketplace.visualstudio.com/items?itemName=PKief.material-product-icons",
+    "description": "Extension which replaces the VS Code default icons with the Material Design icons."
+  },
+  {
     "name": "Events Chatbot",
     "image": "https://github.com/PKief/angular-events-chatbot/raw/master/images/screenshot_01.png",
     "imageAlt": "Logo",
