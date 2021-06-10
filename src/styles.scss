@@ -1,9 +1,7 @@
 @use '~@angular/material' as mat;
 @import "~@angular/material/theming";
 @import "bootstrap/scss/bootstrap-grid.scss";
-@import "bootstrap/scss/utilities/_spacing.scss";
-@import "bootstrap/scss/utilities/_position.scss";
-@import "bootstrap/scss/utilities/_align.scss";
+@import "bootstrap/scss/bootstrap-utilities.scss";
 
 @include mat.core();
 
