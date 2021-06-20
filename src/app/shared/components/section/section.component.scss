@@ -5,15 +5,11 @@
 
   .section {
     width: 100%;
-    padding: 4rem 0;
+    padding: 0;
     color: mat.get-color-from-palette($foreground, text);
 
-    &:not(&:first-child) {
-      margin: 4rem 0;
-    }
-
     h1 {
-      margin-bottom: 4rem;
+      margin: 4rem 0;
       text-align: center;
     }
 
