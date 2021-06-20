@@ -11767,14 +11767,11 @@ textarea.cdk-textarea-autosize-measuring-firefox {
 }
 .light-theme .section {
   width: 100%;
-  padding: 4rem 0;
+  padding: 0;
   color: #1d1d1f;
 }
-.light-theme .section:not(.light-theme .section:first-child) {
-  margin: 4rem 0;
-}
 .light-theme .section h1 {
-  margin-bottom: 4rem;
+  margin: 4rem 0;
   text-align: center;
 }
 .light-theme .section.full-height {
@@ -13557,14 +13554,11 @@ textarea.cdk-textarea-autosize-measuring-firefox {
 }
 .dark-theme .section {
   width: 100%;
-  padding: 4rem 0;
+  padding: 0;
   color: white;
 }
-.dark-theme .section:not(.dark-theme .section:first-child) {
-  margin: 4rem 0;
-}
 .dark-theme .section h1 {
-  margin-bottom: 4rem;
+  margin: 4rem 0;
   text-align: center;
 }
 .dark-theme .section.full-height {
