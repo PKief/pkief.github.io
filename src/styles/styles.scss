@@ -5,21 +5,25 @@
 
 @include mat.core();
 
+// Load custom styles
+@import "./mixins.scss";
+@import "./custom.scss";
+
 /************************
  Theming section
 ************************/
 
 // Custom themable components
-@import "app/shared/components/toolbar/toolbar.component";
-@import "app/shared/components/section/section.component";
-@import "app/shared/components/footer/footer.component";
-@import "app/shared/components/social-links/social-links.component";
-@import "app/shared/components/scroll-down-indicator/scroll-down-indicator.component";
-@import "app/shared/components/sponsor-button/sponsor-button.component";
-@import "app/profile/profile-list/profile-list.component";
-@import "app/project/project-list/project-list.component";
-@import "app/article/article-list/article-list.component";
-@import "app/app.component";
+@import "../app/shared/components/toolbar/toolbar.component";
+@import "../app/shared/components/section/section.component";
+@import "../app/shared/components/footer/footer.component";
+@import "../app/shared/components/social-links/social-links.component";
+@import "../app/shared/components/scroll-down-indicator/scroll-down-indicator.component";
+@import "../app/shared/components/sponsor-button/sponsor-button.component";
+@import "../app/profile/profile-list/profile-list.component";
+@import "../app/project/project-list/project-list.component";
+@import "../app/article/article-list/article-list.component";
+@import "../app/app.component";
 
 @mixin custom-components-theme($theme) {
   @include toolbar-theme($theme);
@@ -34,8 +38,8 @@
   @include sponsor-button-theme($theme);
 }
 
-@import "./themes/light.scss";
-@import "./themes/dark.scss";
+@import "../themes/light.scss";
+@import "../themes/dark.scss";
 
 .light-theme {
   @include mat.all-component-themes($light-theme);

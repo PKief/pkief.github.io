@@ -30,7 +30,7 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "./node_modules/animate.css/animate.min.css",
               "./node_modules/aos/dist/aos.css",
-              "src/styles.scss"
+              "src/styles/styles.scss"
             ],
             "scripts": [
               "./node_modules/aos/dist/aos.js"
@@ -103,7 +103,7 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/styles/styles.scss"
             ],
             "scripts": []
           }
