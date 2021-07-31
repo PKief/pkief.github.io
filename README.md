@@ -1,6 +1,14 @@
-# PersonalWebsite
+<h1 align="center">
+  <br>
+    <img src="https://pkief.github.io/assets/profile-image.jpg" alt="logo" width="200">
+  <br><br>
+  Website of Philipp Kief
+  <br>
+  <br>
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+<h4 align="center">This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI version 11.0.2.</a></h4>
+
 
 ## Development server
 
