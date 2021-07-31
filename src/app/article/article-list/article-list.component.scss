@@ -1,19 +1,17 @@
 @use '~@angular/material' as mat;
+
 @mixin article-list-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
   .article-card {
     text-align: left;
-    margin-bottom: 3rem;
-    padding: 0 3rem;
 
     .article-image {
       overflow: hidden;
       background-size: cover;
       background-position: center;
       min-height: 12rem;
-      margin-bottom: 1rem;
     }
 
     .article-title {
@@ -25,7 +23,6 @@
 
     p.article-description {
       color: mat.get-color-from-palette($foreground, secondary-text);
-      padding-bottom: 0.5rem;
       font-size: 1rem;
       line-height: 25px;
       letter-spacing: 0.8px;
