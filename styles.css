@@ -10140,6 +10140,11 @@ textarea.cdk-textarea-autosize-measuring-firefox {
 .mat-mdc-focus-indicator {
   position: relative;
 }
+@media (max-width: 576px) {
+  .container {
+    width: calc(100% - 2rem);
+  }
+}
 /************************
  Theming section
 ************************/
@@ -11815,7 +11820,7 @@ textarea.cdk-textarea-autosize-measuring-firefox {
   margin: 3rem 0rem;
   width: 22rem;
 }
-@media (max-width: 400px) {
+@media (max-width: 576px) {
   .light-theme #profile-list .profile-entry {
     width: initial;
   }
@@ -11850,7 +11855,7 @@ textarea.cdk-textarea-autosize-measuring-firefox {
   margin: 3rem 0;
   width: 21rem;
 }
-@media (max-width: 400px) {
+@media (max-width: 576px) {
   .light-theme #project-cards .project-card {
     width: initial;
   }
@@ -11876,15 +11881,12 @@ textarea.cdk-textarea-autosize-measuring-firefox {
 }
 .light-theme .article-card {
   text-align: left;
-  margin-bottom: 3rem;
-  padding: 0 3rem;
 }
 .light-theme .article-card .article-image {
   overflow: hidden;
   background-size: cover;
   background-position: center;
   min-height: 12rem;
-  margin-bottom: 1rem;
 }
 .light-theme .article-card .article-title {
   padding: 0.5rem 0;
@@ -11894,7 +11896,6 @@ textarea.cdk-textarea-autosize-measuring-firefox {
 }
 .light-theme .article-card p.article-description {
   color: #1d1d1f;
-  padding-bottom: 0.5rem;
   font-size: 1rem;
   line-height: 25px;
   letter-spacing: 0.8px;
@@ -13602,7 +13603,7 @@ textarea.cdk-textarea-autosize-measuring-firefox {
   margin: 3rem 0rem;
   width: 22rem;
 }
-@media (max-width: 400px) {
+@media (max-width: 576px) {
   .dark-theme #profile-list .profile-entry {
     width: initial;
   }
@@ -13637,7 +13638,7 @@ textarea.cdk-textarea-autosize-measuring-firefox {
   margin: 3rem 0;
   width: 21rem;
 }
-@media (max-width: 400px) {
+@media (max-width: 576px) {
   .dark-theme #project-cards .project-card {
     width: initial;
   }
@@ -13663,15 +13664,12 @@ textarea.cdk-textarea-autosize-measuring-firefox {
 }
 .dark-theme .article-card {
   text-align: left;
-  margin-bottom: 3rem;
-  padding: 0 3rem;
 }
 .dark-theme .article-card .article-image {
   overflow: hidden;
   background-size: cover;
   background-position: center;
   min-height: 12rem;
-  margin-bottom: 1rem;
 }
 .dark-theme .article-card .article-title {
   padding: 0.5rem 0;
@@ -13681,7 +13679,6 @@ textarea.cdk-textarea-autosize-measuring-firefox {
 }
 .dark-theme .article-card p.article-description {
   color: rgba(255, 255, 255, 0.7);
-  padding-bottom: 0.5rem;
   font-size: 1rem;
   line-height: 25px;
   letter-spacing: 0.8px;

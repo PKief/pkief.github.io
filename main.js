@@ -334,7 +334,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"article-cards\" class=\"mt-3 container\">\n  <div\n    class=\"article-card row\"\n    *ngFor=\"let article of articles | async\"\n    data-aos=\"fade-in\"\n  >\n    <div class=\"col-12 col-md-3\">\n      <div\n        class=\"article-image\"\n        [style.backgroundImage]=\"'url(' + article.image + ')'\"\n      ></div>\n    </div>\n    <div class=\"article-details col-12 col-md-9\">\n      <h2 class=\"article-title\">{{ article.title }}</h2>\n\n      <p class=\"article-description\">{{ article.subtitle }}</p>\n      <button\n        mat-stroked-button\n        color=\"primary\"\n        (click)=\"goToLink(article.url)\"\n      >\n        <span>Read</span>\n      </button>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"article-cards\" class=\"mt-3 container\">\n  <div\n    class=\"article-card mb-5 row\"\n    *ngFor=\"let article of articles | async\"\n    data-aos=\"fade-in\"\n  >\n    <div class=\"col-12 col-md-3\">\n      <div\n        class=\"article-image mb-3\"\n        [style.backgroundImage]=\"'url(' + article.image + ')'\"\n      ></div>\n    </div>\n    <div class=\"article-details col-12 col-md-9\">\n      <h2 class=\"article-title px-2\">{{ article.title }}</h2>\n\n      <p class=\"article-description px-2 pb-2\">{{ article.subtitle }}</p>\n      <button\n        mat-stroked-button\n        color=\"primary\"\n        (click)=\"goToLink(article.url)\"\n      >\n        <span>Read</span>\n      </button>\n    </div>\n  </div>\n</div>\n");
 
 /***/ }),
 
