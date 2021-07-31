@@ -1,6 +1,5 @@
 <h1 align="center">
   <br>
-    <img src="https://pkief.github.io/assets/profile-image.jpg" alt="logo" width="200">
   <br><br>
   Website of Philipp Kief
   <br>
