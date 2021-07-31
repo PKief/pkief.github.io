@@ -1,6 +1,6 @@
-<h1 align="center">Website of Philipp Kief</h1>
+# Website of Philipp Kief
 
-<h4 align="center">This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI version 11.0.2.</a></h4>
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
 ## Development server
 
