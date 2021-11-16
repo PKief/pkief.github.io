@@ -9,9 +9,9 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
-
   get year(): number {
     return new Date().getFullYear();
   }
+
+  ngOnInit(): void {}
 }

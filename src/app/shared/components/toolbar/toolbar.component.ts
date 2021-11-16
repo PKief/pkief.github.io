@@ -21,12 +21,6 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
   @ViewChild(MatToolbar)
   toolbar: MatToolbar;
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll() {
-    this.toggleVisibility();
-    this.hasScrolled = true;
-  }
-
   theme: Observable<string>;
   hasScrolled = false;
 
@@ -35,13 +29,33 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
     private themeService: ThemeService
   ) {}
 
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    this.toggleVisibility();
+    this.hasScrolled = true;
+  }
+
   ngOnInit() {
     this.theme = this.themeService.theme;
+  }
+
+  ngAfterViewInit() {
+    this.renderer.addClass(
+      // eslint-disable-next-line no-underscore-dangle
+      this.toolbar._elementRef.nativeElement,
+      'animate__animated'
+    );
+    this.toggleVisibility();
+  }
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
   }
 
   private toggleVisibility() {
     const scrollTop = document.scrollingElement.scrollTop;
     const clientHeight = document.scrollingElement.clientHeight;
+    // eslint-disable-next-line no-underscore-dangle
     const toolbarElement = this.toolbar._elementRef
       .nativeElement as HTMLElement;
     const fadeInAnimation = 'animate__fadeInDown';
@@ -56,17 +70,5 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
       this.renderer.removeClass(toolbarElement, fadeInAnimation);
       this.renderer.addClass(toolbarElement, fadeOutAnimation);
     }
-  }
-
-  ngAfterViewInit() {
-    this.renderer.addClass(
-      this.toolbar._elementRef.nativeElement,
-      'animate__animated'
-    );
-    this.toggleVisibility();
-  }
-
-  toggleTheme() {
-    this.themeService.toggleTheme();
   }
 }

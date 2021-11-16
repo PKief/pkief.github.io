@@ -18,11 +18,6 @@ export class IconService {
     this.iconsRegistered = new BehaviorSubject(false);
   }
 
-  private getIconNames(): Observable<string[]> {
-    const iconsConfigUrl = ['assets', 'icons.json'].join('/');
-    return this.http.get<string[]>(iconsConfigUrl);
-  }
-
   async registerIcons() {
     const iconNames = await this.getIconNames().toPromise();
     iconNames.forEach((name) => {
@@ -34,5 +29,10 @@ export class IconService {
       );
     });
     this.iconsRegistered.next(true);
+  }
+
+  private getIconNames(): Observable<string[]> {
+    const iconsConfigUrl = ['assets', 'icons.json'].join('/');
+    return this.http.get<string[]>(iconsConfigUrl);
   }
 }

@@ -34,8 +34,8 @@ export class ThemeService {
   }
 
   /**
-   * Change the current theme.
-   * Saved in the local storage to reuse it for the next session.
+   * Change the current theme. Saved in the local storage to reuse it for the next session.
+   *
    * @param theme Theme name
    */
   private changeTheme(theme: string) {
@@ -62,6 +62,7 @@ export class ThemeService {
 
   /**
    * Check if theme is available
+   *
    * @param theme Theme name
    */
   private validateTheme(theme: string) {
