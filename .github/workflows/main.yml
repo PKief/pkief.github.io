@@ -15,7 +15,8 @@ jobs:
       - name: Setup NodeJS ⚙
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "16"
+          cache: "npm"
 
       - name: Install node_modules 📦
         run: npm install
@@ -29,11 +30,3 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
           branch: gh-pages
           folder: dist/personal-website
-
-      - name: Cache node_modules 💾
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
