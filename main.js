@@ -78,15 +78,21 @@ class AppComponent {
         this.projects = this.projectService.getProjects();
         this.theme = this.themeService.theme;
         this.iconService.registerIcons();
+        this.detectStickyHeaders();
     }
     ngAfterViewInit() {
-        aos__WEBPACK_IMPORTED_MODULE_0___default().init({
-            duration: 1000,
+        aos__WEBPACK_IMPORTED_MODULE_0___default().init();
+    }
+    detectStickyHeaders() {
+        const stickyHeaders = document.querySelectorAll('.sticky-header');
+        const observer = new IntersectionObserver(([e]) => e.target.classList.toggle('is-pinned', e.intersectionRatio < 1), { rootMargin: '-1px 0px 0px 0px', threshold: [1] });
+        stickyHeaders.forEach((header) => {
+            observer.observe(header);
         });
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdirectiveInject"](_project_project_service__WEBPACK_IMPORTED_MODULE_1__.ProjectService), _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdirectiveInject"](_core_theme_service__WEBPACK_IMPORTED_MODULE_2__.ThemeService), _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdirectiveInject"](_core_icon_service__WEBPACK_IMPORTED_MODULE_3__.IconService)); };
-AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 26, vars: 7, consts: [[1, "app", 3, "ngClass"], [3, "colorTheme"], ["id", "profile-image", "src", "assets/profile-image.jpg", "alt", "Profile Image"], [1, "title"], [1, "subtitle"], [1, "mt-4"], ["data-aos", "fade-in"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 26, vars: 7, consts: [[1, "app", 3, "ngClass"], [3, "colorTheme"], ["id", "profile-image", "src", "assets/profile-image.jpg", "alt", "Profile Image"], [1, "title"], [1, "subtitle"], [1, "mt-4"], ["data-aos", "fade-in", "data-aos-offset", "200", 1, "sticky-header"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵpipe"](1, "async");
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelement"](2, "app-toolbar");
@@ -106,19 +112,19 @@ AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_13__["
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementStart"](13, "app-section", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementStart"](14, "h1", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵtext"](15, "Profile");
+        _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵtext"](15, " Profile ");
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelement"](16, "app-profile-list");
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementStart"](17, "app-section", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementStart"](18, "h1", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵtext"](19, "Projects");
+        _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵtext"](19, " Projects ");
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelement"](20, "app-project-list");
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementStart"](21, "app-section", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementStart"](22, "h1", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵtext"](23, "Articles");
+        _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵtext"](23, " Articles ");
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelement"](24, "app-article-list");
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementEnd"]();
