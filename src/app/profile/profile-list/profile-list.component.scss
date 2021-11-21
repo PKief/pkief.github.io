@@ -1,4 +1,4 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 @import "./../../../styles/mixins.scss";
 
 @mixin profile-list-theme($theme) {
@@ -11,7 +11,8 @@
       width: 22rem;
 
       @include mobile-device() {
-        width: initial;
+        margin: 1.25rem 0rem;
+        width: 100%;
       }
 
       .mat-icon {
@@ -20,6 +21,11 @@
         font-size: 50px;
         margin-bottom: 22px;
         color: mat.get-color-from-palette($foreground, icon);
+
+        @include mobile-device() {
+          font-size: 34px;
+          margin-bottom: 0px;
+        }
       }
 
       .profile-title {
@@ -34,6 +40,10 @@
         letter-spacing: 0.2px;
         font-weight: 500;
         font-size: 18px;
+
+        @include mobile-device() {
+          padding: 0.5rem 2rem;
+        }
       }
     }
   }
