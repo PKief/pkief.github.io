@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IconService } from 'src/app/core/icon.service';
 
@@ -13,15 +8,13 @@ import { IconService } from 'src/app/core/icon.service';
   styleUrls: ['./icon.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class IconComponent implements OnInit {
+export class IconComponent {
   @Input()
-  icon: string;
+  icon: string | undefined;
 
   iconsRegistered: Observable<boolean>;
 
-  constructor(private iconService: IconService) {}
-
-  ngOnInit(): void {
+  constructor(private iconService: IconService) {
     this.iconsRegistered = this.iconService.iconsRegistered;
   }
 }

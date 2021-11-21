@@ -4,7 +4,6 @@ import {
   Component,
   ElementRef,
   Input,
-  Renderer2,
   ViewChild,
 } from '@angular/core';
 
@@ -16,12 +15,12 @@ import {
 })
 export class SectionComponent implements AfterViewInit {
   @ViewChild('section')
-  section: ElementRef;
+  section!: ElementRef;
 
   @Input()
   colorTheme = 'primary';
 
-  constructor(private renderer: Renderer2) {}
+  constructor() {}
 
   ngAfterViewInit() {
     if (this.colorTheme) {

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProfileEntry } from '../models/profile-entry';
 import { ProfileService } from '../profile.service';
@@ -9,12 +9,10 @@ import { ProfileService } from '../profile.service';
   styleUrls: ['./profile-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProfileListComponent implements OnInit {
+export class ProfileListComponent {
   profileEntries: Observable<ProfileEntry[]>;
 
-  constructor(private profileService: ProfileService) {}
-
-  ngOnInit() {
+  constructor(private profileService: ProfileService) {
     this.profileEntries = this.profileService.getProfileEntries();
   }
 }

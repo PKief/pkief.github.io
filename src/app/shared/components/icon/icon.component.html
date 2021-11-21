@@ -1,5 +1,5 @@
 <mat-icon
   class="app-icon"
-  *ngIf="iconsRegistered | async"
+  *ngIf="icon && (iconsRegistered | async)"
   [svgIcon]="icon"
 ></mat-icon>

@@ -4,7 +4,7 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
-import AOS from 'aos';
+import * as AOS from 'aos';
 import { Observable } from 'rxjs';
 import { IconService } from './core/icon.service';
 import { ThemeService } from './core/theme.service';
@@ -25,13 +25,13 @@ export class AppComponent implements OnInit, AfterViewInit {
     private projectService: ProjectService,
     private themeService: ThemeService,
     private iconService: IconService
-  ) {}
-
-  ngOnInit() {
+  ) {
     this.projects = this.projectService.getProjects();
     this.theme = this.themeService.theme;
-    this.iconService.registerIcons();
+  }
 
+  ngOnInit() {
+    this.iconService.registerIcons();
     this.detectStickyHeaders();
   }
 

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Project } from 'src/app/project/models/project';
 import { ProjectService } from '../project.service';
@@ -9,12 +9,10 @@ import { ProjectService } from '../project.service';
   styleUrls: ['./project-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProjectListComponent implements OnInit {
+export class ProjectListComponent {
   projects: Observable<Project[]>;
 
-  constructor(private projectService: ProjectService) {}
-
-  ngOnInit() {
+  constructor(private projectService: ProjectService) {
     this.projects = this.projectService.getProjects();
   }
 

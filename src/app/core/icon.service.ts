@@ -15,7 +15,7 @@ export class IconService {
     private sanitizer: DomSanitizer,
     private http: HttpClient
   ) {
-    this.iconsRegistered = new BehaviorSubject(false);
+    this.iconsRegistered = new BehaviorSubject<boolean>(false);
   }
 
   async registerIcons() {

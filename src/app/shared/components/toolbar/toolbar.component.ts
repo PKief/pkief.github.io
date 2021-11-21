@@ -3,7 +3,6 @@ import {
   ChangeDetectionStrategy,
   Component,
   HostListener,
-  OnInit,
   Renderer2,
   ViewChild,
 } from '@angular/core';
@@ -17,26 +16,21 @@ import { ThemeService } from 'src/app/core/theme.service';
   styleUrls: ['./toolbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ToolbarComponent implements OnInit, AfterViewInit {
+export class ToolbarComponent implements AfterViewInit {
   @ViewChild(MatToolbar)
-  toolbar: MatToolbar;
+  toolbar!: MatToolbar;
 
   theme: Observable<string>;
   hasScrolled = false;
 
-  constructor(
-    private renderer: Renderer2,
-    private themeService: ThemeService
-  ) {}
+  constructor(private renderer: Renderer2, private themeService: ThemeService) {
+    this.theme = this.themeService.theme;
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
     this.toggleVisibility();
     this.hasScrolled = true;
-  }
-
-  ngOnInit() {
-    this.theme = this.themeService.theme;
   }
 
   ngAfterViewInit() {
@@ -53,8 +47,11 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
   }
 
   private toggleVisibility() {
-    const scrollTop = document.scrollingElement.scrollTop;
-    const clientHeight = document.scrollingElement.clientHeight;
+    const scrollTop = document.scrollingElement?.scrollTop;
+    const clientHeight = document.scrollingElement?.clientHeight;
+    if (scrollTop === undefined || clientHeight === undefined) {
+      return;
+    }
     // eslint-disable-next-line no-underscore-dangle
     const toolbarElement = this.toolbar._elementRef
       .nativeElement as HTMLElement;

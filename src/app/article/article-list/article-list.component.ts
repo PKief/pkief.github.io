@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ArticleService } from '../article.service';
 import { Article } from '../models/article';
@@ -9,12 +9,10 @@ import { Article } from '../models/article';
   styleUrls: ['./article-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ArticleListComponent implements OnInit {
+export class ArticleListComponent {
   articles: Observable<Article[]>;
 
-  constructor(private articleService: ArticleService) {}
-
-  ngOnInit() {
+  constructor(private articleService: ArticleService) {
     this.articles = this.articleService.getArticles();
   }
 
