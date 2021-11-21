@@ -1,4 +1,5 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
+
 @mixin app-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
@@ -28,5 +29,21 @@
 
   .big-content {
     height: 200vh;
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 0px;
+    z-index: 100000;
+    transition: font-size ease 0.15s;
+
+    /* styles for when the header is in sticky mode */
+    &.is-pinned {
+      font-size: 21px;
+
+      @include mobile-device() {
+        font-size: 17px;
+      }
+    }
   }
 }

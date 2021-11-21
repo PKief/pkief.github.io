@@ -31,11 +31,23 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.projects = this.projectService.getProjects();
     this.theme = this.themeService.theme;
     this.iconService.registerIcons();
+
+    this.detectStickyHeaders();
   }
 
   ngAfterViewInit() {
-    AOS.init({
-      duration: 1000,
+    AOS.init();
+  }
+
+  private detectStickyHeaders() {
+    const stickyHeaders = document.querySelectorAll('.sticky-header');
+    const observer = new IntersectionObserver(
+      ([e]) => e.target.classList.toggle('is-pinned', e.intersectionRatio < 1),
+      { rootMargin: '-1px 0px 0px 0px', threshold: [1] }
+    );
+
+    stickyHeaders.forEach((header) => {
+      observer.observe(header);
     });
   }
 }
