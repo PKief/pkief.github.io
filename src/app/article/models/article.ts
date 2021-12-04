@@ -4,4 +4,6 @@ export interface Article {
   subtitle: string;
   image: string;
   imageAlt: string;
+  publishDate: string;
+  readingTime: string;
 }

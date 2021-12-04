@@ -3,24 +3,26 @@
     class="article-card mb-5 row"
     *ngFor="let article of articles | async"
     data-aos="fade-in"
+    (click)="goToLink(article.url)"
+    role="link"
   >
-    <div class="col-12 col-md-3">
+    <div class="col-12 col-md-3 col-lg-2">
       <div
         class="article-image mb-3"
         [style.backgroundImage]="'url(' + article.image + ')'"
       ></div>
     </div>
-    <div class="article-details col-12 col-md-9">
-      <h2 class="article-title px-2">{{ article.title }}</h2>
-
-      <p class="article-description px-2 pb-2">{{ article.subtitle }}</p>
-      <button
-        mat-stroked-button
-        color="primary"
-        (click)="goToLink(article.url)"
-      >
-        <span>Read</span>
-      </button>
+    <div class="article-details col-12 col-md-9 col-lg-10">
+      <div class="ps-md-3">
+        <h2 class="article-title">{{ article.title }}</h2>
+        <p class="article-description">{{ article.subtitle }}</p>
+        <div class="article-meta">
+          <span>
+            Published on {{ article.publishDate }} ·
+            {{ article.readingTime }} read
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
