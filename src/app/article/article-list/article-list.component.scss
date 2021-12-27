@@ -1,5 +1,5 @@
 @use "@angular/material" as mat;
-@import "./../../../styles/mixins";
+@import "mixins";
 
 @mixin article-list-theme($theme) {
   $background: map-get($theme, background);
@@ -7,7 +7,8 @@
 
   .article-card {
     text-align: left;
-    cursor: pointer;
+    text-decoration: none;
+    color: mat.get-color-from-palette($foreground, text);
 
     .article-image {
       overflow: hidden;

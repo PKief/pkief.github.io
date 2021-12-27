@@ -1,5 +1,5 @@
 @use "@angular/material" as mat;
-@import "./../styles/mixins";
+@import "mixins";
 
 @mixin app-theme($theme) {
   $background: map-get($theme, background);
