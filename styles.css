@@ -13670,7 +13670,7 @@ textarea.cdk-textarea-autosize-measuring-firefox {
   opacity: 0.12;
 }
 .dark-theme .mat-toolbar {
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(17, 17, 17, 0.85);
   color: white;
 }
 .dark-theme .mat-toolbar.mat-primary {
@@ -13719,7 +13719,7 @@ textarea.cdk-textarea-autosize-measuring-firefox {
           backdrop-filter: saturate(180%) blur(20px);
   transform: translateZ(0);
   will-change: transform;
-  background-color: rgba(0, 0, 0, 0.72);
+  background-color: rgba(17, 17, 17, 0.85);
   border-bottom: 1.5px solid #32373a;
   max-height: 3.3rem;
   padding: 0;
