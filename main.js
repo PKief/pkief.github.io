@@ -530,14 +530,6 @@ class ThemeService {
     removePrefersColorSchemaEventListener() {
         this.colorSchemeMedia.removeEventListener('change', this.getPrefersColorSchemeCallback(this.theme));
     }
-    /**
-     * Check if theme is available
-     *
-     * @param theme Theme name
-     */
-    validateTheme(theme) {
-        return this.availableThemes.some((t) => t === theme);
-    }
     getPrefersColorSchemeCallback(theme) {
         return (e) => {
             const themeName = e.matches ? 'dark-theme' : 'light-theme';
