@@ -60,15 +60,6 @@ export class ThemeService {
     );
   }
 
-  /**
-   * Check if theme is available
-   *
-   * @param theme Theme name
-   */
-  private validateTheme(theme: string) {
-    return this.availableThemes.some((t) => t === theme);
-  }
-
   private getPrefersColorSchemeCallback(theme: BehaviorSubject<string>) {
     return (e: MediaQueryListEvent): void => {
       const themeName = e.matches ? 'dark-theme' : 'light-theme';
