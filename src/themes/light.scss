@@ -1,4 +1,4 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 @import "@angular/material/theming";
 
 // custom background and foreground palettes
@@ -21,7 +21,7 @@ $light-theme-background: (
 
 $light-theme-foreground: (
   base: #1d1d1f,
-  divider: #E0E0E0,
+  divider: #e0e0e0,
   dividers: #000000,
   disabled: rgba(#1d1d1f, 1),
   disabled-button: rgba(#1d1d1f, 1),
@@ -36,7 +36,11 @@ $light-theme-foreground: (
   slider-off-active: rgba(#1d1d1f, 1),
 );
 
-@function create-light-theme($primary, $accent, $warn: mat.define-palette(mat.$red-palette)) {
+@function create-light-theme(
+  $primary,
+  $accent,
+  $warn: mat.define-palette(mat.$red-palette)
+) {
   @return (
     primary: $primary,
     accent: $accent,
@@ -53,6 +57,9 @@ $theme-primary: (
   200: #424242,
   300: #424242,
   500: #424242,
+  600: #424242,
+  700: #424242,
+  800: #424242,
   900: #aaaaaa,
   A100: #aaaaaa,
   A200: #aaaaaa,
@@ -72,26 +79,26 @@ $theme-primary: (
 );
 
 $theme-accent: (
-  50: #EC407A,
-  100: #EC407A,
-  200: #EC407A,
-  300: #EC407A,
-  500: #EC407A,
+  50: #ec407a,
+  100: #ec407a,
+  200: #ec407a,
+  300: #ec407a,
+  500: #ec407a,
   900: #aaaaaa,
   A100: #aaaaaa,
   A200: #aaaaaa,
   A400: #aaaaaa,
   A700: #aaaaaa,
   contrast: (
-    50: #EC407A,
-    100: #EC407A,
-    200: #EC407A,
-    300: #EC407A,
-    900: #EC407A,
-    A100: #EC407A,
-    A200: #EC407A,
-    A400: #EC407A,
-    A700: #EC407A,
+    50: #ec407a,
+    100: #ec407a,
+    200: #ec407a,
+    300: #ec407a,
+    900: #ec407a,
+    A100: #ec407a,
+    A200: #ec407a,
+    A400: #ec407a,
+    A700: #ec407a,
   ),
 );
 

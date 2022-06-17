@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, lastValueFrom, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -19,7 +19,7 @@ export class IconService {
   }
 
   async registerIcons() {
-    const iconNames = await this.getIconNames().toPromise();
+    const iconNames = await lastValueFrom(this.getIconNames());
     iconNames.forEach((name) => {
       this.iconRegistry.addSvgIcon(
         name,
