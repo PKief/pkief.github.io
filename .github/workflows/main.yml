@@ -25,8 +25,7 @@ jobs:
         run: npm run build -- --configuration production
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          token: ${{ secrets.ACCESS_TOKEN }}
           branch: gh-pages
           folder: dist/personal-website
