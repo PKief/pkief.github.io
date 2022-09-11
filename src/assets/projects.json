@@ -9,7 +9,7 @@
   },
   {
     "name": "Material Color Converter",
-    "image": "https://raw.githubusercontent.com/PKief/material-color-converter/master/src/assets/logo.png",
+    "image": "https://raw.githubusercontent.com/PKief/material-color-converter/main/src/assets/logo.png",
     "imageAlt": "Logo",
     "sourceUrl": "https://github.com/PKief/material-color-converter",
     "url": "https://pkief.github.io/material-color-converter/",
@@ -17,34 +17,58 @@
   },
   {
     "name": "Markdown Checkbox",
-    "image": "https://raw.githubusercontent.com/PKief/vscode-markdown-checkbox/master/logo.png",
+    "image": "https://raw.githubusercontent.com/PKief/vscode-markdown-checkbox/main/logo.png",
     "imageAlt": "Logo",
     "sourceUrl": "https://github.com/PKief/vscode-markdown-checkbox",
     "url": "https://marketplace.visualstudio.com/items?itemName=PKief.markdown-checkbox",
     "description": "VS Code extension to create and toggle checkboxes in Markdown documents"
   },
   {
-    "name": "Checkbox Snake",
-    "image": "https://raw.githubusercontent.com/PKief/checkbox-snake/master/logo.png",
+    "name": "Svelte Snake",
+    "image": "https://raw.githubusercontent.com/PKief/svelte-snake/main/src/img/logo.png",
     "imageAlt": "Logo",
-    "sourceUrl": "https://github.com/PKief/checkbox-snake",
-    "url": "https://pkief.github.io/checkbox-snake/",
-    "description": "Snake game with HTML checkboxes"
+    "sourceUrl": "https://github.com/PKief/svelte-snake",
+    "url": "https://pkief.com/svelte-snake",
+    "description": "A snake game written in Svelte and TypeScript"
   },
   {
     "name": "Material Product Icons",
-    "image": "https://raw.githubusercontent.com/PKief/vscode-material-product-icons/master/logo.png",
+    "image": "https://raw.githubusercontent.com/PKief/vscode-material-product-icons/main/logo.png",
     "imageAlt": "Logo",
     "sourceUrl": "https://github.com/PKief/vscode-material-product-icons",
     "url": "https://marketplace.visualstudio.com/items?itemName=PKief.material-product-icons",
     "description": "Extension which replaces the VS Code default icons with the Material Design icons."
   },
   {
-    "name": "Events Chatbot",
-    "image": "https://github.com/PKief/angular-events-chatbot/raw/master/images/screenshot_01.png",
+    "name": "Copy Branch Name",
+    "image": "https://raw.githubusercontent.com/PKief/vscode-copy-branch-name/main/logo.png",
     "imageAlt": "Logo",
-    "sourceUrl": "https://github.com/PKief/angular-events-chatbot",
-    "url": "https://events-chatbot.firebaseapp.com/",
-    "description": "Chatbot that searches for events in your environment."
+    "sourceUrl": "https://github.com/PKief/vscode-copy-branch-name",
+    "url": "https://marketplace.visualstudio.com/items?itemName=PKief.copy-branch-name",
+    "description": "VS Code extension to copy the current branch name into the clipboard"
+  },
+  {
+    "name": "SVG Color Linter",
+    "image": "https://raw.githubusercontent.com/PKief/svg-color-linter/main/logo.png",
+    "imageAlt": "Logo",
+    "sourceUrl": "https://github.com/PKief/svg-color-linter",
+    "url": "https://www.npmjs.com/package/svg-color-linter",
+    "description": "Linting tool to check if SVG files use only colors of a given color palette"
+  },
+  {
+    "name": "Changelog Machine",
+    "image": "https://raw.githubusercontent.com/PKief/changelog-machine/main/logo.png",
+    "imageAlt": "Logo",
+    "sourceUrl": "https://github.com/PKief/changelog-machinelinter",
+    "url": "https://www.npmjs.com/package/changelog-machine",
+    "description": "Changelog generator based on Git commit messages and tags"
+  },
+  {
+    "name": "Checkbox Snake",
+    "image": "https://raw.githubusercontent.com/PKief/checkbox-snake/main/logo.png",
+    "imageAlt": "Logo",
+    "sourceUrl": "https://github.com/PKief/checkbox-snake",
+    "url": "https://pkief.github.io/checkbox-snake/",
+    "description": "Snake game with HTML checkboxes"
   }
 ]

@@ -1,19 +1,19 @@
 [
   { "title": "Location", "content": "Stuttgart, Germany", "icon": "place" },
   {
-    "title": "Professional Experience",
-    "content": "3 years",
-    "icon": "engineering"
-  },
-  {
     "title": "Technical Interest",
-    "content": "Frontend, UI/UX, Cloud",
+    "content": "Web, Frontend, UI/UX, Cloud",
     "icon": "psychology"
   },
   {
     "title": "Programming Languages",
-    "content": "JavaScript, TypeScript, Java, Python",
+    "content": "TypeScript, JavaScript, Java, Python, HTML, CSS",
     "icon": "keyboard"
+  },
+  {
+    "title": "Expertise",
+    "content": "Angular, RxJS, Bootstrap, Material Design, Webpack, Git, Nodejs",
+    "icon": "lightbulb"
   },
   {
     "title": "University",
