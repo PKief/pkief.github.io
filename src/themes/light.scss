@@ -9,14 +9,14 @@ $light-theme-background: (
   hover: rgba(#1d1d1f, 0.4),
   card: rgb(245, 245, 245),
   dialog: #eee,
-  disabled-button: #000000,
+  disabled-button: #cecece,
   raised-button: map-get(mat.$grey-palette, 800),
-  focused-button: #000000,
+  focused-button: #cecece,
   selected-button: map_get(mat.$grey-palette, 900),
   selected-disabled-button: map_get(mat.$grey-palette, 800),
-  disabled-button-toggle: black,
-  unselected-chip: map_get(mat.$grey-palette, 700),
-  disabled-list-option: black,
+  disabled-button-toggle: #cecece,
+  unselected-chip: map_get(mat.$grey-palette, 300),
+  disabled-list-option: #cecece,
 );
 
 $light-theme-foreground: (

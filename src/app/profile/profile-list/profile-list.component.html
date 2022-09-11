@@ -8,9 +8,12 @@
     *ngFor="let entry of profileEntries | async"
   >
     <mat-icon>{{ entry.icon }}</mat-icon>
-    <div class="profile-title">{{ entry.title }}</div>
-    <h2 class="profile-content">
-      {{ entry.content }}
-    </h2>
+    <h2 class="profile-title">{{ entry.title }}</h2>
+    <mat-chip-list aria-label="Profile bullet points">
+      <mat-chip color="accent" *ngFor="let point of entry.bulletPoints">
+        <img *ngIf="point.image" matChipAvatar [src]="point.image" />
+        {{ point.text }}
+      </mat-chip>
+    </mat-chip-list>
   </div>
 </div>

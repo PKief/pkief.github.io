@@ -32,7 +32,7 @@ export class IconService {
   }
 
   private getIconNames(): Observable<string[]> {
-    const iconsConfigUrl = ['assets', 'icons.json'].join('/');
+    const iconsConfigUrl = ['assets', 'data', 'icons.json'].join('/');
     return this.http.get<string[]>(iconsConfigUrl);
   }
 }

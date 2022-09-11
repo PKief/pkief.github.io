@@ -1,5 +1,5 @@
 export interface ProfileEntry {
   title: string;
-  content: string;
+  bulletPoints: { text: string; image?: string }[];
   icon: string;
 }

@@ -10,7 +10,7 @@ export class ArticleService {
   constructor(private http: HttpClient) {}
 
   getArticles(): Observable<Article[]> {
-    const articlesUrl = ['assets', 'articles.json'].join('/');
+    const articlesUrl = ['assets', 'data', 'articles.json'].join('/');
     return this.http.get<Article[]>(articlesUrl);
   }
 }

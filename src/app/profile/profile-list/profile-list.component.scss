@@ -8,11 +8,13 @@
   #profile-list {
     .profile-entry {
       margin: 3rem 0rem;
-      width: 22rem;
+      width: 20rem;
+      padding: 0 5rem;
 
       @include mobile-device() {
         margin: 1.25rem 0rem;
         width: 100%;
+        padding: 0 2rem;
       }
 
       .mat-icon {
@@ -29,21 +31,14 @@
       }
 
       .profile-title {
-        color: mat.get-color-from-palette($foreground, secondary-text);
-        letter-spacing: 1.4px;
-        font-variant: all-small-caps;
-        font-size: 1.1rem;
-      }
-
-      .profile-content {
-        padding: 0.5rem 4rem;
+        padding: 0.5rem 0;
         letter-spacing: 0.2px;
         font-weight: 500;
         font-size: 18px;
+      }
 
-        @include mobile-device() {
-          padding: 0.5rem 2rem;
-        }
+      .mat-chip-list-wrapper {
+        justify-content: center;
       }
     }
   }

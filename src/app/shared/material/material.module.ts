@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
 import {
   MatFormFieldDefaultOptions,
   MatFormFieldModule,
@@ -24,6 +25,7 @@ const modules = [
   MatIconModule,
   MatToolbarModule,
   MatTooltipModule,
+  MatChipsModule,
 ];
 
 @NgModule({

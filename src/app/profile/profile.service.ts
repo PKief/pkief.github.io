@@ -10,7 +10,7 @@ export class ProfileService {
   constructor(private http: HttpClient) {}
 
   getProfileEntries(): Observable<ProfileEntry[]> {
-    const profileUrl = ['assets', 'profile.json'].join('/');
+    const profileUrl = ['assets', 'data', 'profile.json'].join('/');
     return this.http.get<ProfileEntry[]>(profileUrl);
   }
 }
